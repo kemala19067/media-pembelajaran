@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #efefef;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header h1 {
+    float: left;
+    padding: 15px 0;
+    color: #004b91;
+}
+
+section {
+    padding: 50px 0;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #333;
+    color: #666;
+    text-align: center;
+}
+
+.label {
+    background-color: #004b91;
+    color: white;
+}
+
+.kontak {
+    position: relative;
+    min-height: 50vh;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.kontak .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.kontak .content h2 {
+    padding: 20px 0;
+    font-weight: 500;
+    color: #004b91;
+}
+
+.kontak .content p {
+    font-weight: 300;
+    color: #666;
+    padding: 10px;
+}
+
+.content .contactForm {
+    width: 60%;
+    padding: 40px;
+    background-color: #004b91;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: white;
+}
+
+.contactForm .inputBox input:focus~label,
+.contactForm .inputBox input:valid~label,
+.contactForm .inputBox textarea:focus~label,
+.contactForm .inputBox textarea:valid~label {
+    color: white;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox button {
+    width: 100px;
+    background-color: #333;
+    color: #efefef;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
