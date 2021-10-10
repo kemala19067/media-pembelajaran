@@ -31,11 +31,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/forum">Forum</a>
-
         </ul>
       </div>
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <i class="bi bi-box-arrow-right"><a class="nav-link px-3" href="/">Keluar</a></i>
+        </div>
     </div>
-  </nav>
+</nav>
 
 
 
