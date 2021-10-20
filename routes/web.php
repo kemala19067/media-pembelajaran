@@ -79,6 +79,12 @@ Route::get('/forum', function () {
     ]);
 });
 
+    Route::get('/forumpostingan', function () {
+        return view('forumpostingan', [
+            "tittle" => "forumpostingan"
+            ]);
+        });
+
  
 
 Route::get('/awal', function () {
