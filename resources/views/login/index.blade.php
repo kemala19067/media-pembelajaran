@@ -1,8 +1,8 @@
-@extends('layouts.page')
+@extends('layouts.mainlogin')
 
 @section('container')
 <body>
-  
+
 </body>
 
 <div class="row justify-content-center">
@@ -28,7 +28,7 @@
   <form action="/login" method="post">
   @csrf
   <center><h2>MASUK</h2></center>
-    
+
     <center>
     <img class="mb-3" src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="" width="300" height="230">
     </center>
@@ -47,9 +47,9 @@
       <label for="floatingPassword">Kata Sandi</label>
     </div>
 
-   
+
     <button class="w-100 btn btn-lg btn-primary" type="submit">Masuk</button>
-    
+
   </form>
     <small class="d-block mt-3">Belum punya akun? <a href="/register">Daftar</a></small>
     <small class="d-block mt-3"><a href="/cover">Kembali</a></small>

@@ -1,47 +1,25 @@
-@extends('layouts.page')
+@extends('layouts.mainlogin')
+
 @section('container')
 
-<header>
-<link href="cover.css" rel="stylesheet">
-  </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Belajar Asik</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link" aria-current="page" href="\cover">Beranda</a>
-        <a class="nav-link" href="\about">Tentang</a>
-        <a class="nav-link active" href="#">Kontak</a>
-      </nav>
-    </div>
-  </header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
- 
-      </button>
-    </div>
-  </div>
-</header>
+<body class="d-flex h-100 text-center text-white bg-dark">
 
-<main>
-    
+    <div class="cover-container d-flex p-3 mx-auto flex-column mb-5">
+        <div class="nav-bar">
+          <h3 class="float-md-start mb-0">Belajar Asik</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link" aria-current="page" href="\cover">Beranda</a>
+            <a class="nav-link active" href="\about">Tentang</a>
+            <a class="nav-link" href="\kontak">Kontak</a>
+          </nav>
+        </div>
+    </div>
+
+    <main>
         <h3>Kontak</h3>
 		<p>Dengan senang hati menerima dan merespon kebutuhan kalian</p>
-        
-		 <div class="contact-info">
+
+		<div class="contact-info">
         <div class="card">
         <i class="bi bi-envelope" style="color: black"></i>
 
@@ -70,11 +48,8 @@
             </div>
         </div>
     </div>
-    </div>
-    </section>
-	
-	
+    </main>
+</body>
 
-    </body>
-    </html>
+
 	@endsection

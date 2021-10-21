@@ -1,4 +1,4 @@
-@extends('layouts.page')
+@extends('layouts.mainlogin')
 
 @section('container')
 <div class="row justify-content-center">
@@ -7,7 +7,7 @@
   <form action="/register" method="post">
   @csrf
   <center><h2>DAFTAR</h2></center>
-    
+
     <center>
     <img class="mb-3" src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg" alt="" width="300" height="230">
     </center>
@@ -51,9 +51,9 @@
       @enderror
     </div>
 
-   
+
     <button class="w-100 btn btn-lg btn-primary" type="submit">Daftar</button>
-    
+
   </form>
     <small class="d-block mt-3">Sudah punya akun? <a href="/login">Masuk</a></small>
     <small class="d-block mt-3"><a href="/cover">Kembali</a></small>

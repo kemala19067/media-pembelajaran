@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container">
-      <a class="navbar-brand" href="/">TIK</a>
+      <a class="navbar-brand" href="/home">TIK</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/home">Home</a>
           </li>
         </li>
         <li class="nav-item dropdown">
@@ -42,7 +42,7 @@
       </div>
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-            <i class="bi bi-box-arrow-right"><a class="nav-link px-3" href="/">Keluar</a></i>
+            <a class="nav-link px-3" href="/"><i class="bi bi-box-arrow-right"></i>Keluar</a>
         </div>
     </div>
 </nav>

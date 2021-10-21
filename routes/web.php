@@ -1,15 +1,18 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\CoverController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AwalController;
-use App\Http\Controllers\KontakController;
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\DashboardController;
-use Illuminate\Support\Facades\Route;
 use App\Models\course;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AwalController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CoverController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\KontakController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PenggunaAdminController;
+use App\Http\Controllers\DashboardCoursesController;
+use App\Http\Controllers\PenggunaUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +88,7 @@ Route::get('/forum', function () {
             ]);
         });
 
- 
+
 
 Route::get('/awal', function () {
     return view('awal', [
@@ -105,3 +108,11 @@ Route::get('/awal', [AwalController::class,'index']);
 Route::get('/kontak', [KontakController::class,'index']);
 
 Route::get('/dashboard', [DashboardController::class,'index']);
+
+Route::resource('/dashboard/courses', DashboardCoursesController::class);
+
+Route::resource('/dashboard/pengguna/admin', PenggunaAdminController::class);
+
+Route::resource('/dashboard/pengguna/user', PenggunaUserController::class);
+
+
