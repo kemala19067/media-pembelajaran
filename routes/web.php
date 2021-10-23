@@ -13,6 +13,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PenggunaAdminController;
 use App\Http\Controllers\DashboardCoursesController;
 use App\Http\Controllers\PenggunaUserController;
+use App\Http\Controllers\ForumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,13 +72,13 @@ Route::get('/kuis', function () {
 });
 
 Route::get('/forum', function () {
-    return view('forum', [
+    return view('forum.index', [
         "title" => "Forum"
     ]);
 });
 
 Route::get('/forum', function () {
-    return view('forum', [
+    return view('forum.index', [
         "tittle" => "Forum"
     ]);
 });
@@ -115,4 +116,8 @@ Route::resource('/dashboard/pengguna/admin', PenggunaAdminController::class);
 
 Route::resource('/dashboard/pengguna/user', PenggunaUserController::class);
 
+Route::get('/forum', [ForumController::class,'index']);
+Route::post('add', [ForumController::class, 'add']);
 
+Route::get('kontak', [KontakController::class,'index']);
+Route::post('add', [KontakController::class, 'add']);
