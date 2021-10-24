@@ -110,6 +110,7 @@ Route::get('/kontak', [KontakController::class,'index']);
 
 Route::get('/dashboard', [DashboardController::class,'index']);
 
+Route::get('/dashboard/courses/checkSlug', [DashboardCoursesController::class, 'checkSlug']);
 Route::resource('/dashboard/courses', DashboardCoursesController::class);
 
 Route::resource('/dashboard/pengguna/admin', PenggunaAdminController::class);

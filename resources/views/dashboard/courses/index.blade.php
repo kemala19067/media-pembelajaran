@@ -17,6 +17,12 @@
         </div>
     </div>
 
+    @if (session()->has('success'))
+    <div class="alert alert-success col-md-9 ms-sm-auto col-lg-10 px-md-4" role="alert">
+        {{ session('success') }}
+      </div>
+    @endif
+
     <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <a href="/dashboard/courses/create" class="btn btn-primary mb-3">Tambah Materi</a>
         <table class="table table-striped table-sm pt-3 pb-2 mb-3">
@@ -34,8 +40,12 @@
                 <td>{{ $course->title }}</td>
                 <td>
                     <a href="/dashboard/courses/{{ $course->slug }}" class="badge bg-info"><i class="bi bi-eye"></i></a>
-                    <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                    <a href="" class="badge bg-danger"><i class="bi bi-trash"></i></a>
+                    <a href="/dashboard/courses/{{ $course->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                    <form action="/dashboard/courses/{{ $course->slug }}" method="post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus materi?')"><i class="bi bi-trash"></i></button>
+                    </form>
                 </td>
               </tr>
 
