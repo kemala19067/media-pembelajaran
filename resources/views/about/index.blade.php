@@ -4,6 +4,9 @@
 
 <body class="d-flex h-100 text-center text-white bg-dark">
 
+
+<main>
+
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <div class="nav-bar">
       <h3 class="float-md-start mb-0">Belajar Asik</h3>
@@ -15,7 +18,6 @@
     </div>
 </div>
 
-<main>
   <section class="py-5 text-center container">
     <div class="row py-lg-8">
       <div class="col-lg-10 col-md-8 mx-auto">
@@ -34,7 +36,7 @@
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 1" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Materi</text></svg>
 
             <div class="card-body" style="color: black">
-              <p class="card-text">Menyediakan materi-materi mengenai mata pelajatan Teknologi Informasi dan Komunikasi</p>
+              <p class="card-text">Menyediakam materi mengenai Teknologi Informasi dan Komunikasi</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
 
@@ -49,7 +51,7 @@
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 2" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Kuis</text></svg>
 
             <div class="card-body" style="color: black">
-              <p class="card-text">Soal-soal untuk mengetahui pemahaman mengenai mata pelajaran Teknologi Informasi dan Komunikasi</p>
+              <p class="card-text">Menyediakan tes pemahaman mengenai Teknologi Informasi dan Komunikasi</p>
               <div class="d-flex justify-content-between align-items-center">
 
               </div>
@@ -61,7 +63,7 @@
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 3" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Forum</text></svg>
 
             <div class="card-body" style="color: black">
-              <p class="card-text">Wadah untuk berdiskusi sekitar mata pelajaran Teknologi Informasi dan Komunikasi</p>
+              <p class="card-text">Wadah untuk berdiskusi terkait Teknologi Informasi dan Komunikasi</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
 

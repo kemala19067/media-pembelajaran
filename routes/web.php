@@ -14,7 +14,7 @@ use App\Http\Controllers\PenggunaAdminController;
 use App\Http\Controllers\DashboardCoursesController;
 use App\Http\Controllers\PenggunaUserController;
 use App\Http\Controllers\ForumController;
-
+use App\Http\Controllers\PesanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -122,3 +122,4 @@ Route::post('add', [ForumController::class, 'add']);
 
 Route::get('kontak', [KontakController::class,'index']);
 Route::post('add', [KontakController::class, 'add']);
+Route::resource('/dashboard/pesan', PesanController::class);

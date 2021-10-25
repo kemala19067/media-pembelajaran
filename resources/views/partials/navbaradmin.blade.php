@@ -89,6 +89,11 @@
               <i class="bi bi-chat-left-text"></i> Forum
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/pesan*') ? 'active' : '' }}" href="/dashboard/pesan">
+              <i class="bi bi-chat-left-text"></i> Data Pesan
+            </a>
+          </li>
     </nav>
   </div>
 </div>

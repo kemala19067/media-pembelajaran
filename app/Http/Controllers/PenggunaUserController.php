@@ -14,7 +14,11 @@ class PenggunaUserController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pengguna.user.index');
+        $datas = User::all();
+    
+        return view('dashboard.pengguna.user.index', compact(
+            'datas'
+        ));
     }
 
     /**
@@ -24,7 +28,10 @@ class PenggunaUserController extends Controller
      */
     public function create()
     {
-        //
+        $model = new User;
+        return view('dashboard.pengguna.user.create', compact(
+            'model'
+        ));
     }
 
     /**
@@ -35,7 +42,15 @@ class PenggunaUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new User;
+        $model->name = $request->name;
+        $model->username = $request->username;
+        $model->password = $request->password;
+        $model->role = $request->role;
+        $model->email = $request->email;
+        $model->save();
+
+        return redirect('dashboard/pengguna/user');
     }
 
     /**
@@ -57,7 +72,10 @@ class PenggunaUserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $model = User::find($user)->first();
+        return view('dashboard.pengguna.user.edit', compact(
+            'model'
+        ));
     }
 
     /**
@@ -69,7 +87,15 @@ class PenggunaUserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $model = User::find($user)->first();
+        $model->name = $request->name;
+        $model->username = $request->username;
+        $model->password = $request->password;
+        $model->role = $request->role;
+        $model->email = $request->email;
+        $model->save();
+
+        return redirect('dashboard/pengguna/user');
     }
 
     /**
@@ -78,8 +104,10 @@ class PenggunaUserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(User $id)
     {
-        //
+        $model = User::find($id);
+        $model->delete();
+        return redirect('dashboard/pengguna/user');
     }
 }
