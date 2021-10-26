@@ -2,7 +2,7 @@
 
 @section('container')
 
-<body class="d-flex h-100 text-center text-white bg-dark">
+<body class="d-flex h-100 text-center text-black bg-info">
 
     <div class="cover-container d-flex p-3 mx-auto flex-column mb-5">
         <div class="nav-bar">
@@ -20,7 +20,7 @@
 		<p>Dengan senang hati menerima dan merespon kebutuhan kalian</p>
 
 		<div class="contact-info">
-        <div class="card">
+        <div class="card" style="background-color: #4682B4">
         <i class="bi bi-envelope" style="color: black"></i>
 
 			<i class="icon" style="color: black"><small>Email</small></i>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="background-color: #4682B4">
         <i class="bi bi-telephone" style="color: black"></i>
             <i class="icon" style="color: black"><small>Telepon</small></i>
             <div class="card-content" style="color: black">
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="background-color: #4682B4">
         <i class="bi bi-geo-alt" style="color: black"></i>
             <i class="icon" style="color: black"><small>Lokasi</small></i>
             <div class="card-content" style="color: black">
@@ -54,7 +54,7 @@
 <div class="hero" id="home">
             <div class="container-fluid">
 
-            
+
 
 <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
             <div class="container-fluid">
@@ -70,7 +70,7 @@
                         <form action="add" method="post" >
                         @csrf
                             <div class="contact-form">
-                            
+
                                 <div id="success"></div>
                                 <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                     <div class="control-group">
@@ -94,11 +94,11 @@
                                     </div>
                                 </form>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>zsx
+        </div>
 
 	@endsection

@@ -20,45 +20,42 @@
         {{ session('success') }}
       </div>
     @endif
-    <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <a class="btn btn-info" href="{{ url('/dashboard/pengguna/user/create')}}">Tambah</a>
-    <br></br>
-<table class="table-bordered table">
-    <tr>
-        <th>Nama</th>
-        <th>Username</th>
-        <th>Role</th>
-        <th>Email</th>
-        <th >Action</th>
-        
-    </tr>
+    {{-- <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <a class="btn btn-primary" href="{{ url('/dashboard/pengguna/user/create')}}">Tambah</a>
+    <br></br> --}}
 
-    @foreach($datas as $key=>$value)
-    <tr>
-    <td>{{$value->name}}</td>
-    <td>{{$value->username}}</td>
-    <td>{{$value->role}}</td>
-    <td>{{$value->email}}</td>
-    
-    <td>
-                    
-                    
-                    <a href="{{url('/dashboard/pengguna/user/'.$value->id.'/edit') }}" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                    
-                    
-                    <form action="{{url('/dashboard/pengguna/user/'.$value->id) }}" method="post" class="d-inline">
+    <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <a href="{{ url('/dashboard/pengguna/user/create')}}" class="btn btn-primary mb-3">Tambah</a>
+        <table class="table table-striped table-sm pt-3 pb-2 mb-3">
+          <thead>
+              <tr>
+                  <th>Nama</th>
+                  <th>Username</th>
+                  <th>Role</th>
+                  <th>Email</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach($datas as $key=>$value)
+              <tr>
+                  <td>{{$value->name}}</td>
+                  <td>{{$value->username}}</td>
+                  <td>{{$value->role}}</td>
+                  <td>{{$value->email}}</td>
+                  <td>
+                      <a href="{{url('/dashboard/pengguna/user/'.$value->id.'/edit') }}" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                      <form action="{{url('/dashboard/pengguna/user/'.$value->id) }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
                         <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus data?')"><i class="bi bi-trash"></i></button>
-                    </form>
-                    
-                </td>
-    
-    </tr>
-
-    @endforeach
-
-    </table>
+                      </form>
+                  </td>
+              </tr>
+              @endforeach
+          </tbody>
+        </table>
+    </div>
 
 
 

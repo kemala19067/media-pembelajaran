@@ -20,43 +20,37 @@
         {{ session('success') }}
       </div>
     @endif
-    <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    
-    <br></br>
-<table class="table-bordered table">
-    <tr>
-        <th>Nama</th>
-        <th>Email</th>
-        <th>Subjek</th>
-        <th>Pesan</th>
-        <th >Action</th>
-        
-    </tr>
 
-    @foreach($datas as $key=>$value)
-    <tr>
-    <td>{{$value->name}}</td>
-    <td>{{$value->email}}</td>
-    <td>{{$value->subject}}</td>
-    <td>{{$value->message}}</td>
-    
-    <td>
-                    
-                    
-                    
-    <form action="{{url('/dashboard/pesan/'.$value->id) }}" method="post" class="d-inline">
+    <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <table class="table table-striped table-sm pt-3 pb-2 mb-3">
+          <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Subjek</th>
+                <th>Pesan</th>
+                <th >Action</th>
+            </tr>
+          </thead>
+          <tbody>
+              @foreach($datas as $key=>$value)
+              <tr>
+                <td>{{$value->name}}</td>
+                <td>{{$value->email}}</td>
+                <td>{{$value->subject}}</td>
+                <td>{{$value->message}}</td>
+                <td>
+                    <form action="{{url('/dashboard/pesan/'.$value->id) }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
                         <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus data?')"><i class="bi bi-trash"></i></button>
                     </form>
-                    
                 </td>
-    
-    </tr>
-
-    @endforeach
-
-    </table>
+              </tr>
+              @endforeach
+          </tbody>
+        </table>
+    </div>
 
 
 

@@ -2,7 +2,7 @@
 
 @section('container')
 
-<body class="d-flex h-100 text-center text-white bg-dark">
+<body class="d-flex h-100 text-center text-black bg-info">
 
 
 <main>
@@ -28,14 +28,14 @@
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-info">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 1" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Materi</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 1" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4682B4"/><text x="50%" y="50%" fill="#87CEEB" dy=".3em">Materi</text></svg>
 
-            <div class="card-body" style="color: black">
+            <div class="card-body" style="color: rgb(255, 255, 255)">
               <p class="card-text">Menyediakam materi mengenai Teknologi Informasi dan Komunikasi</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -47,10 +47,10 @@
           </div>
         </div>
         <div class="col">
-          <div class="card shadow-sm" style="color: black">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 2" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Kuis</text></svg>
+          <div class="card shadow-sm" style="color: rgb(255, 255, 255)">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 2" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4682B4"/><text x="50%" y="50%" fill="#87CEEB" dy=".3em">Kuis</text></svg>
 
-            <div class="card-body" style="color: black">
+            <div class="card-body" style="color: rgb(255, 255, 255)">
               <p class="card-text">Menyediakan tes pemahaman mengenai Teknologi Informasi dan Komunikasi</p>
               <div class="d-flex justify-content-between align-items-center">
 
@@ -60,9 +60,9 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 3" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Forum</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Gambar 3" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#4682B4"/><text x="50%" y="50%" fill="#87CEEB" dy=".3em">Forum</text></svg>
 
-            <div class="card-body" style="color: black">
+            <div class="card-body" style="color: rgb(255, 255, 255)">
               <p class="card-text">Wadah untuk berdiskusi terkait Teknologi Informasi dan Komunikasi</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -80,7 +80,7 @@
 
 </main>
 
-<footer class="text-muted py-5">
+<footer class="text-muted py-5 bg-info">
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </footer>
 

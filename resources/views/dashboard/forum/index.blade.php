@@ -23,7 +23,7 @@
             <tr>
               <th scope="col">No</th>
               <th scope="col">Nama</th>
-              <th scope="col">Pesan</th>
+              <th scope="col">Forum</th>
               <th scope="col">Topik</th>
               <th scope="col">Action</th>
             </tr>
@@ -33,6 +33,7 @@
                 <td>1,001</td>
                 <td>random</td>
                 <td>data</td>
+                <td>placeholder</td>
                 <td>
                     <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
                     <a href="" class="badge bg-danger"><i class="bi bi-trash"></i></a>
