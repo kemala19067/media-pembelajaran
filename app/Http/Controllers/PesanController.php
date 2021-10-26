@@ -81,10 +81,9 @@ class PesanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pesan $pesan)
     {
-        $datas = Pesan::find($id);
-        $datas->delete();
-        return redirect('dashboard/pesan');
+        pesan::destroy($pesan->id);
+        return redirect('/dashboard/pesan')->with('success', 'Data telah dihapus!');
     }
 }

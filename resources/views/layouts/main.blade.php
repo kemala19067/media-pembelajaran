@@ -8,7 +8,7 @@
     {{-- Bootstrap Icon --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
-    <title>Coding Yuk</title>
+    <title>E-Learning TIK</title>
 </head>
 <body>
     @include('partials.navbar')

@@ -15,7 +15,11 @@
             </div>
         </div>
     </div>
-
+    @if (session()->has('success'))
+    <div class="alert alert-success col-md-9 ms-sm-auto col-lg-10 px-md-4" role="alert">
+        {{ session('success') }}
+      </div>
+    @endif
     <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <a class="btn btn-info" href="{{ url('/dashboard/pengguna/user/create')}}">Tambah</a>
     <br></br>
@@ -40,12 +44,13 @@
                     
                     
                     <a href="{{url('/dashboard/pengguna/user/'.$value->id.'/edit') }}" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                    <input type="hidden" name="_method" value="delete">
-                    <a href="" class="badge bg-danger" onclick="return confirm('Yakin menghapus data ?')"><i class="bi bi-trash"></i></a>
-                   <form action="{{ url('/dashboard/pengguna/user/'.$value->id" method="post">
                     
-                    @csrf
                     
+                    <form action="{{url('/dashboard/pengguna/user/'.$value->id) }}" method="post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus data?')"><i class="bi bi-trash"></i></button>
+                    </form>
                     
                 </td>
     

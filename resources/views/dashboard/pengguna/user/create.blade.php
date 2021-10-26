@@ -3,7 +3,7 @@
 @section('container')
 <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Halaman Pengguna Umum</h1>
+            <h1 class="h2">Halaman Data Pengguna </h1>
             <div class="btn-toolbar mb-2 mb-md-0">
                 <div class="btn-group me-2">
                     <button type="button" class="btn btn-sm btn-outline-secondary"></button>
@@ -22,12 +22,37 @@
 @csrf
 
 <p> Tambah Data Pengguna </p>
-    Nama        : <input type="text" name="name"><br></br>
-    Username    : <input type="text" name="username"><br></br>
-    Password    : <input type="text" name="password"><br></br>
-    Role        : <input type="text" name="role"><br></br>
-    Email       : <input type="text" name="email"><br></br>
+<table>
+<tr>
+    <td>Nama</td>
+    <td><input type="text" name="name"></td>
+    </tr>
 
-    <button class="btn btn-info" type="submit">SIMPAN</button>
+
+    <tr>
+    <td>Username</td>
+    <td><input type="text" name="username"></td>
+    </tr>
+
+    <tr>
+    <td>Password</td>
+    <td><input type="text" name="password"></td>
+    
+    </tr>
+
+
+    <tr>
+    <td>Role</td>
+    <td><input type="text" name="role"></td>
+    </tr>
+
+    <tr>
+    <td>
+    Email     </td>
+    <td><input type="text" name="email"></td>
+    <button class="btn btn-info" type="submit">SIMPAN</button> <br></br>
+    </tr>
+
+    
 </form>
 @endsection

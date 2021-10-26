@@ -33,33 +33,33 @@
                 <div class="col-xl-4 col-md-12 col-12 mb-6">
                     <div class="list-group">
                                                 <a href="/user/postinganku/1" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">uwais22</p>
+                            <p class="mb-1 text-dark-success">user1</p>
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">kenapa php nya error we?</h5>
+                                <h5 class="mb-1">Topik1 ...</h5>
                                 <small>2 days ago</small>
                             </div>
                             <p class="mb-1 text-secondary">0 komentar</p>
                         </a>
                                                 <a href="/user/postinganku/2" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">uwais22</p>
+                            <p class="mb-1 text-dark-success">user2</p>
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">python ku gk jalan</h5>
+                                <h5 class="mb-1">Topik2 ...</h5>
                                 <small>2 days ago</small>
                             </div>
                             <p class="mb-1 text-secondary">0 komentar</p>
                         </a>
                                                 <a href="/user/postinganku/3" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">uwais22</p>
+                            <p class="mb-1 text-dark-success">user3</p>
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">error assignrole spatie laravel 8</h5>
+                                <h5 class="mb-1">Topik3 ...</h5>
                                 <small>2 days ago</small>
                             </div>
                             <p class="mb-1 text-secondary">0 komentar</p>
                         </a>
                                                 <a href="/user/postinganku/4" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">said22</p>
+                            <p class="mb-1 text-dark-success">user4</p>
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">error prefix laravel 8</h5>
+                                <h5 class="mb-1">Topik4 ...</h5>
                                 <small>2 days ago</small>
                             </div>
                             <p class="mb-1 text-secondary">0 komentar</p>
@@ -81,7 +81,7 @@
                                             class="avatar avatar-md rounded-circle">
                                     </div>
                                     <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">uwais22</h5>
+                                        <h5 class="mb-0 fw-bold">user1</h5>
                                         <p class="mb-0">2 days ago</p>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@
 
                             <div class="mb-4">
                                 <!-- text -->
-                                <p class="mb-4">python ku gk jalan.</p>
+                                <p class="mb-4">Topik1 ...</p>
                             </div>
                             <!-- icons -->
                             <div class="mb-4">

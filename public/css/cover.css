@@ -6,13 +6,14 @@
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
+
 .btn-secondary:focus {
-  color: #333;
+  color: rgb(86, 116, 180);
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
 body{
-
+  
 }
 
 /*

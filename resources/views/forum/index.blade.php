@@ -76,33 +76,33 @@
                             <!-- card title -->
                             <h4 class="card-title mb-4">Postingan</h4>
                                                         <a href="/user/postinganku/1" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">user123</p>
+                                <p class="mb-1 text-dark-success">user1</p>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">kenapa saya tidak bisa install python?</h5>
+                                    <h5 class="mb-1">Topik1 ... </h5>
                                     <small>2 days ago</small>
                                 </div>
                                 <p class="mb-1 text-secondary">0 komentar</p>
                             </a>
                                                         <a href="/user/postinganku/2" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">tester111</p>
+                                <p class="mb-1 text-dark-success">user2</p>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">python  jalan</h5>
+                                    <h5 class="mb-1">Topik 2 ...</h5>
                                     <small>2 days ago</small>
                                 </div>
                                 <p class="mb-1 text-secondary">0 komentar</p>
                             </a>
                                                         <a href="/user/postinganku/3" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">uwais22</p>
+                                <p class="mb-1 text-dark-success">user3</p>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">error laravel 5</h5>
+                                    <h5 class="mb-1">Topik3 ....</h5>
                                     <small>2 days ago</small>
                                 </div>
                                 <p class="mb-1 text-secondary">0 komentar</p>
                             </a>
                                                         <a href="/user/postinganku/4" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">contohuser</p>
+                                <p class="mb-1 text-dark-success">user4</p>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">tidak bisa menjalankan laravel 8</h5>
+                                    <h5 class="mb-1">Topik4 ...</h5>
                                     <small>2 days ago</small>
                                 </div>
                                 <p class="mb-1 text-secondary">0 komentar</p>

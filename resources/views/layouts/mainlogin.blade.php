@@ -57,7 +57,7 @@
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/dashboard.js">
 
-    <title>Coding Yuk</title>
+    <title>E-Learning TIK</title>
 </head>
 <body>
     <div class="container mt-4">

@@ -104,10 +104,10 @@ class PenggunaUserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $id)
+    public function destroy(User $user)
     {
-        $model = User::find($id);
-        $model->delete();
-        return redirect('dashboard/pengguna/user');
+        user::destroy($user->id);
+        return redirect('/dashboard/pengguna/user')->with('success', 'Data telah dihapus!');
+    
     }
 }

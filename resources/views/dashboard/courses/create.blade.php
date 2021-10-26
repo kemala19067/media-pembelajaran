@@ -18,7 +18,7 @@
     </div>
 
     <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <form method="post" action="/dashboard/courses">
+    <form method="post" action="{{ url('/dashboard/courses') }}">
         @csrf
         <div class="mb-3">
           <label for="title" class="form-label">Judul</label>
