@@ -43,7 +43,7 @@
             @error('body')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
-            <input id="body" type="hidden" name="content" required value="{{ old('body') }}">
+            <input id="body" type="hidden" name="body" required value="{{ old('body') }}">
             <trix-editor input="body"></trix-editor>
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>

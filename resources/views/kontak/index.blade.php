@@ -6,7 +6,7 @@
 
     <div class="cover-container d-flex p-3 mx-auto flex-column mb-5">
         <div class="nav-bar">
-          <h3 class="float-md-start mb-0">Belajar Asik</h3>
+          <h3 class="float-md-start mb-0">E-Learning TIK</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link" aria-current="page" href="\cover">Beranda</a>
             <a class="nav-link " href="\about">Tentang</a>

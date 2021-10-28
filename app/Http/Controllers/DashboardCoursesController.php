@@ -40,18 +40,19 @@ class DashboardCoursesController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'slug' => 'required|unique:courses',
-            'body' => 'required'
-        ]);
+        $model = Course::find($request->id);
+        Course::updateOrCreate(['id'=> $request->id],
+        [
+            "title" => $request->title,
+            "slug" => $request->slug,
+            "body" => $request->body
+            
+        ]
+        );
 
-        $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100, '...');
+        return redirect('dashboard/courses');
 
-        course::create($validatedData);
-
-        return redirect('/dashboard/courses')->with('success', 'Materi baru telah ditambahkan!');
+      
     }
 
     /**
@@ -100,7 +101,7 @@ class DashboardCoursesController extends Controller
 
         $validatedData = $request->validate($rules);
 
-        $validatedData['user_id'] = auth()->user()->id;
+        
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100, '...');
 
         course::where('id', $course->id)

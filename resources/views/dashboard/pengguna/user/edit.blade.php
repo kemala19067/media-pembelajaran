@@ -23,6 +23,7 @@
 
 
 <p> Tambah Data Pengguna </p>
+    <input type="hidden" name="id" value="{{$model->id}}">
     Nama        : <input type="text" name="name" value="{{ $model->name }}"><br></br>
     Username    : <input type="text" name="username" value="{{ $model->username }}"><br></br>
     Password    : <input type="text" name="password" value="{{ $model->password }}"><br></br>

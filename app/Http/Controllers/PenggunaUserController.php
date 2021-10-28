@@ -42,13 +42,16 @@ class PenggunaUserController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new User;
-        $model->name = $request->name;
-        $model->username = $request->username;
-        $model->password = $request->password;
-        $model->role = $request->role;
-        $model->email = $request->email;
-        $model->save();
+        $model = User::find($request->id);
+        User::updateOrCreate(['id'=> $request->id],
+        [
+            "name" => $request->name,
+            "username" => $request->username,
+            "role" => $request->username,
+            "password" => $request->password,
+            "email" => $request->email
+        ]
+        );
 
         return redirect('dashboard/pengguna/user');
     }
