@@ -14,7 +14,12 @@ class DashboardForumController extends Controller
      */
     public function index()
     {
-        return view('dashboard.forum.index');
+        $datas = Forum::all();
+    
+        return view('dashboard.forum.index', compact(
+            'datas'
+        ));
+        
     }
 
     /**
@@ -24,7 +29,10 @@ class DashboardForumController extends Controller
      */
     public function create()
     {
-        //
+        $model = new Forum;
+        return view('dashboard.forum.create', compact(
+            'model'
+        ));
     }
 
     /**
@@ -35,9 +43,15 @@ class DashboardForumController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
+    $model = Forum::find($request->id);
+    Forum::updateOrCreate(['id'=> $request->id],
+    [
+        "title" => $request->title,
+        "content" => $request->content
+    ]
+    );
+    return redirect('dashboard/forum');
+}
     /**
      * Display the specified resource.
      *
@@ -57,7 +71,10 @@ class DashboardForumController extends Controller
      */
     public function edit(Forum $forum)
     {
-        //
+        $model = Forum::find($forum)->first();
+        return view('dashboard.forum.edit', compact(
+            'model'
+        ));
     }
 
     /**
@@ -80,6 +97,7 @@ class DashboardForumController extends Controller
      */
     public function destroy(Forum $forum)
     {
-        //
+        forum::destroy($forum->id);
+        return redirect('/dashboard/forum')->with('success', 'Data telah dihapus!');
     }
 }

@@ -43,25 +43,30 @@
                         <!-- card body -->
                         <div class="card-body">
                             <!-- card title -->
-                            <h4 class="card-title mb-4">Buat Postingan</h4>
+                            @if(Session::get('success'))
+                    <div class="alert alert-success">
+                    {{ Session::get('success')}}
+                    </div>
+                @endif
+                            <h4 class="card-title mb-4">Buat Forum</h4>
                             
-                            <form action="http://127.0.0.1:8000/user/addpost" method="post">
-                                <input type="hidden" name="_token" value="SDhlRmwiMqUIDpeInaKo0U3h5l6YrGZmxz53K1Vl">                                <div class="mb-3">
+                            <form action="addforum" method="post">
+                            @csrf  
+                            
+                            
+                                <div class="mb-3">
+                                
+                                    <div class="mb-3">
                                     <label class="form-label" for="selectOne">Forum</label>
-                                    <select id="forum" name="forum"
-                                        class="form-control ">
-                                        <option value="">Pilih Forum</option>
-                                                                                <option value="1">php</option>
-                                                                                <option value="2">python</option>
-                                                                                <option value="3">laravel</option>
-                                                                                <option value="4">javascript</option>
-                                                                            </select>
+                                    <textarea id="title" name="title"
+                                    class="form-control  "
+                                        placeholder="Nama Forum" rows="4"></textarea>
                                                                     </div>
                                 <div class="mb-3">
                                     <label class="form-label" for="content">Content</label>
                                     <textarea id="content" name="content"
                                         class="form-control  "
-                                        placeholder="Content" rows="4"></textarea>
+                                        placeholder="Konte" rows="4"></textarea>
                                                                     </div>
                                 <button type="submit" class="btn btn-primary">Buat</button>
                             </form>
@@ -70,44 +75,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
                     <!-- card -->
-                    <div class="card">
-                        <!-- card body -->
-                        <div class="card-body">
-                            <!-- card title -->
-                            <h4 class="card-title mb-4">Postingan</h4>
-                                                        <a href="/user/postinganku/1" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">user1</p>
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Topik1 ... </h5>
-                                    <small>2 days ago</small>
-                                </div>
-                                <p class="mb-1 text-secondary">0 komentar</p>
-                            </a>
-                                                        <a href="/user/postinganku/2" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">user2</p>
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Topik 2 ...</h5>
-                                    <small>2 days ago</small>
-                                </div>
-                                <p class="mb-1 text-secondary">0 komentar</p>
-                            </a>
-                                                        <a href="/user/postinganku/3" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">user3</p>
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Topik3 ....</h5>
-                                    <small>2 days ago</small>
-                                </div>
-                                <p class="mb-1 text-secondary">0 komentar</p>
-                            </a>
-                                                        <a href="/user/postinganku/4" class="list-group-item list-group-item-action">
-                                <p class="mb-1 text-dark-success">user4</p>
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Topik4 ...</h5>
-                                    <small>2 days ago</small>
-                                </div>
-                                <p class="mb-1 text-secondary">0 komentar</p>
-                            </a>
-                            
+                   
                         </div>
                     </div>
                 </div>

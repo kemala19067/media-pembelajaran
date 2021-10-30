@@ -120,8 +120,8 @@ Route::resource('/dashboard/pengguna/admin', PenggunaAdminController::class);
 
 Route::resource('/dashboard/pengguna/user', PenggunaUserController::class);
 
-Route::get('/forum', [ForumController::class,'index']);
-Route::post('add', [ForumController::class, 'add']);
+Route::get('forum', [ForumController::class,'index']);
+Route::post('addforum', [ForumController::class, 'addforum']);
 
 Route::get('kontak', [KontakController::class,'index']);
 Route::post('add', [KontakController::class, 'add']);

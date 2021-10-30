@@ -13,21 +13,18 @@ class ForumController extends Controller
         return view('forum.index');
     }
 
-    public function add(Request $request){
-        $request->validate([
-            
-            'title'=>'required',
-            'content'=>'required'
-        ]);
-        
+    public function addforum(Request $request){
+      $request->validate([
+          'title'=>'required',
+          'content'=>'required'
+    ]);
     $query = DB::table('forums')->insert([
-        
         'title'=>$request->input('title'),
         'content'=>$request->input('content')
     ]);
 
-    if($query){
-        return back()->with('success','Berhasil terkirim !!');
+   if($query){
+       return back()->with('success','Berhasil membuat forum !!');
+   }
+      }
     }
-    }
-}
