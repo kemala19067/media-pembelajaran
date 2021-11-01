@@ -5,7 +5,7 @@
 <html>
 
 <head>
-    <title>Kuis Pemasaran</title>
+    <title>Kuis Pembelajaran TIK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/kuis.css">
 </head>
@@ -20,7 +20,7 @@
         <h4>Intruksi:</h4>
         <p>Total pertanyaan: <span class="total-pertanyaan">10</span></p>
         <button type="button" class="btn" onclick="starQuiz()">Mulai</button>
-        <button type="button" class="btn" style="background-color: red;"><a href="/kuis" style="color: #FFF;text-decoration: none;">Kembali</a></button>
+        <button type="button" class="btn" style="background-color: red;"><a href="/topik" style="color: #FFF;text-decoration: none;">Kembali</a></button>
     </div>
 
     <div class="quiz-box custom-box hide">

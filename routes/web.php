@@ -16,6 +16,8 @@ use App\Http\Controllers\PenggunaUserController;
 use App\Http\Controllers\PenggunaAdminController;
 use App\Http\Controllers\DashboardForumController;
 use App\Http\Controllers\DashboardCoursesController;
+use App\Http\Controllers\DashboardKuisTopikController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,8 +68,14 @@ Route::get('/courses', [CourseController::class, 'index']);
 //halaman single course
 Route::get('courses/{course:slug}', [CourseController::class, 'show']);
 
+Route::get('/topik', function () {
+    return view('kuis.index', [
+        "title" => "Quiz"
+    ]);
+});
+
 Route::get('/kuis', function () {
-    return view('kuis', [
+    return view('kuis.kuis', [
         "title" => "Quiz"
     ]);
 });
@@ -126,3 +134,4 @@ Route::post('addforum', [ForumController::class, 'addforum']);
 Route::get('kontak', [KontakController::class,'index']);
 Route::post('add', [KontakController::class, 'add']);
 Route::resource('/dashboard/pesan', PesanController::class);
+Route::resource('/dashboard/kuis/topik', DashboardKuisTopikController::class);

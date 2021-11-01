@@ -44,7 +44,7 @@
               </svg>
           <h2 style="padding: 5px">Quiz</h2>
           <p>Soal-soal untuk mengetahui pemahaman mengenai mata pelajaran Teknologi Informasi dan Komunikasi</p>
-          <p><a class="btn btn-secondary" href="/kuis">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="/topik">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">

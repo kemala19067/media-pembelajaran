@@ -25,7 +25,7 @@
               Quiz
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/kuis">Daftar Quiz</a></li>
+              <li><a class="dropdown-item" href="/topik">Daftar Quiz</a></li>
               <li><a class="dropdown-item" href="#">Peringkat</a></li>
             </ul>
           </li>

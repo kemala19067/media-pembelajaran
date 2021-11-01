@@ -10,7 +10,7 @@ class course extends Model
 {
     use HasFactory, Sluggable;
 
-    protected $fillable = ['title', 'slug', 'excerpt', 'body'];
+    protected $fillable = ['title', 'slug', 'body'];
 
     public function getRouteKeyName()
     {

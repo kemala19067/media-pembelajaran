@@ -28,7 +28,7 @@ class DashboardCoursesController extends Controller
      */
     public function create()
     {
-            
+
         return view('dashboard.courses.create');
     }
 
@@ -46,13 +46,13 @@ class DashboardCoursesController extends Controller
             "title" => $request->title,
             "slug" => $request->slug,
             "body" => $request->body
-            
+
         ]
         );
 
         return redirect('dashboard/courses');
 
-      
+
     }
 
     /**
@@ -101,8 +101,6 @@ class DashboardCoursesController extends Controller
 
         $validatedData = $request->validate($rules);
 
-        
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 100, '...');
 
         course::where('id', $course->id)
             ->update($validatedData);
