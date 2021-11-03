@@ -24,8 +24,11 @@
 
 <p> Tambah Data Pengguna </p>
     <input type="hidden" name="id" value="{{$model->id}}">
-    Nama        : <input type="text" name="name" value="{{ $model->name }}"><br></br>
-    Username    : <input type="text" name="username" value="{{ $model->username }}"><br></br>
+    <div class="mb-3">
+        <label for="name" class="form-label">Nama</label>
+        <input type="text" name="name" value="{{ $model->name }}"><br></br>
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" value="{{ $model->username }}"><br></br>
     Password    : <input type="text" name="password" value="{{ $model->password }}"><br></br>
     Role        : <input type="text" name="role" value="{{ $model->role }}"><br></br>
     Email       : <input type="text" name="email" value="{{ $model->email }}"><br></br>

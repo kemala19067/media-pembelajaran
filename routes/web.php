@@ -16,8 +16,8 @@ use App\Http\Controllers\PenggunaUserController;
 use App\Http\Controllers\PenggunaAdminController;
 use App\Http\Controllers\DashboardForumController;
 use App\Http\Controllers\DashboardCoursesController;
-use App\Http\Controllers\DashboardKuisTopikController;
-
+use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -107,10 +107,10 @@ Route::get('/awal', function () {
     });
 
 
-Route::get('/login', [LoginController::class,'index']);
-Route::post('/login', [LoginController::class,'authenticate']);
+Route::get('/login', [LoginController::class,'index'])->name('login');
+Route::post('/login', [LoginController::class,'authenticate'])->name('login');
 
-Route::get('/register', [RegisterController::class,'index']);
+Route::get('/register', [RegisterController::class,'index'])->name('register');
 Route::get('/cover', [CoverController::class,'index']);
 Route::post('/register', [RegisterController::class,'store']);
 Route::get('/about', [AboutController::class,'index']);
@@ -135,3 +135,16 @@ Route::get('kontak', [KontakController::class,'index']);
 Route::post('add', [KontakController::class, 'add']);
 Route::resource('/dashboard/pesan', PesanController::class);
 Route::resource('/dashboard/kuis/topik', DashboardKuisTopikController::class);
+
+//foruser
+Route::middleware(['auth:sanctum','verified'])->group(function(){
+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+});
+
+
+
+//foradmin
+Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+
+});
