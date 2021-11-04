@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kuis;
 use Illuminate\Http\Request;
 
-class DashboardKuisTopikController extends Controller
+class TopikController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class DashboardKuisTopikController extends Controller
      */
     public function index()
     {
-        return view('dashboard.kuis.topik.index', [
-            'kuisis' => Kuis::all()
-        ]);
+        $kuisis = Kuis::all();
+        return view('kuis.index', compact('kuisis'));
     }
 
     /**
@@ -26,11 +25,7 @@ class DashboardKuisTopikController extends Controller
      */
     public function create()
     {
-        $model = new Kuis();
-        return view('dashboard.kuis.topik.create', compact(
-            'model'
-        ));
-        // return view('dashboard.kuis.topik.create');
+        //
     }
 
     /**
@@ -41,16 +36,7 @@ class DashboardKuisTopikController extends Controller
      */
     public function store(Request $request)
     {
-        $model = Kuis::find($request->id);
-        Kuis::updateOrCreate(['id'=> $request->id],
-        [
-            "title" => $request->title,
-            "body" => $request->body
-
-        ]
-        );
-
-        return redirect('dashboard/kuis/topik');
+        //
     }
 
     /**
@@ -72,10 +58,7 @@ class DashboardKuisTopikController extends Controller
      */
     public function edit(Kuis $kuis)
     {
-        $model = Kuis::find($kuis)->first();
-        return view('dashboard.kuis.topik.edit', compact(
-            'model'
-        ));
+        //
     }
 
     /**
@@ -98,7 +81,6 @@ class DashboardKuisTopikController extends Controller
      */
     public function destroy(Kuis $kuis)
     {
-        Kuis::destroy($kuis->id);
-        return redirect('/dashboard/courses')->with('success', 'Topik telah dihapus!');
+        //
     }
 }

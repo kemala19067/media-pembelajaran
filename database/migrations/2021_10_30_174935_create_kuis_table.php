@@ -15,8 +15,8 @@ class CreateKuisTable extends Migration
     {
         Schema::create('kuis', function (Blueprint $table) {
             $table->id();
-            $table->title();
-            $table->body();
+            $table->string('title');
+            $table->text('body');
             $table->timestamps();
         });
     }

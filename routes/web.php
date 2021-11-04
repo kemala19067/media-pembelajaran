@@ -15,9 +15,12 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PenggunaUserController;
 use App\Http\Controllers\PenggunaAdminController;
 use App\Http\Controllers\DashboardForumController;
-use App\Http\Controllers\DashboardCoursesController;
 use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Controllers\DashboardCoursesController;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Controllers\DashboardKuisTopikController;
+use App\Http\Controllers\TopikController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,11 +71,13 @@ Route::get('/courses', [CourseController::class, 'index']);
 //halaman single course
 Route::get('courses/{course:slug}', [CourseController::class, 'show']);
 
-Route::get('/topik', function () {
-    return view('kuis.index', [
-        "title" => "Quiz"
-    ]);
-});
+// Route::get('/topik', function () {
+//     return view('kuis.index', [
+//         "title" => "Quiz"
+//     ]);
+// });
+
+Route::resource('/topik', TopikController::class);
 
 Route::get('/kuis', function () {
     return view('kuis.kuis', [

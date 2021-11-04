@@ -34,25 +34,21 @@
             </tr>
           </thead>
           <tbody>
-              {{-- @foreach ($courses as $course) --}}
+              @foreach ($kuisis as $kuis)
               <tr>
-                <td>1,001</td>
-                <td>random</td>
-                {{-- <td>{{ $loop->iteration }}</td>
-                <td>{{ $course->title }}</td> --}}
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $kuis->title }}</td>
                 <td>
-                    <a href="#" class="badge bg-info"><i class="bi bi-eye"></i></a>
-                    <a href="#" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                    <button class="badge bg-danger border-0"><i class="bi bi-trash"></i></button>
-                    {{-- <form action="#" method="post" class="d-inline">
+                    <a href="/dashboard/kuis/topik/'.$value->id.'/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                    <form action="/dashboard/kuis/topik/'.$value->id.'" method="post" class="d-inline">
                         @method('delete')
                         @csrf
-                        <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus materi?')"><i class="bi bi-trash"></i></button>
-                    </form> --}}
+                        <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus topik?')"><i class="bi bi-trash"></i></button>
+                    </form>
                 </td>
               </tr>
 
-              {{-- @endforeach --}}
+              @endforeach
           </tbody>
         </table>
     </div>
