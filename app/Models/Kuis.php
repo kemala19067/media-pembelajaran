@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kuis extends Model
 {
     use HasFactory;
+    protected $table = 'kuis';
     protected $fillable = ['title', 'body'];
 
     // public function getRouteKeyName()

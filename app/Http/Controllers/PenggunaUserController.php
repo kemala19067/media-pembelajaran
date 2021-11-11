@@ -75,6 +75,7 @@ class PenggunaUserController extends Controller
      */
     public function edit(User $user)
     {
+        
         $model = User::find($user)->first();
         return view('dashboard.pengguna.user.edit', compact(
             'model'
@@ -90,15 +91,7 @@ class PenggunaUserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $model = User::find($user)->first();
-        $model->name = $request->name;
-        $model->username = $request->username;
-        $model->password = $request->password;
-        $model->role = $request->role;
-        $model->email = $request->email;
-        $model->save();
-
-        return redirect('dashboard/pengguna/user');
+        
     }
 
     /**

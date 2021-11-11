@@ -56,6 +56,8 @@
     <link rel="stylesheet" href="/css/kontak.css">
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/dashboard.js">
+    <link rel="stylesheet" href="/js/Pertanyaan.js">
+    <link rel="stylesheet" href="/js/appkuis.js">
 
     <title>E-Learning TIK</title>
 </head>

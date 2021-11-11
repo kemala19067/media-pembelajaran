@@ -8,6 +8,8 @@
     <title>Kuis Pembelajaran TIK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/kuis.css">
+    <link rel="stylesheet" href="js/Pertanyaan.js">
+    <link rel="stylesheet" href="js/appkuis.js">
 </head>
 <body>
     <div class="home-box custom-box">
@@ -35,7 +37,7 @@
         </div>
         <div class="next-question-btn">
             <button type="buttton" class="btn" onclick="next()">Selanjutnya</button>
-            <button type="button" class="btn" onclick="window.location.href='index.html'">Keluar</button>
+            <button type="button" class="btn" onclick="window.location.href='/topik'">Keluar</button>
         </div>
         <div class="answer-indicator">
 
@@ -71,13 +73,13 @@
             </tr>
         </table>
         <button type="button" class="btn" onclick="tryAgainQuiz()">Coba Lagi</button>
-        <button type="button" class="btn" onclick="window.location.href='index.html'">Kembali Ke Menu</button>
+        <button type="button" class="btn" onclick="window.location.href='/topik'">Kembali Ke Menu</button>
     </div>
 
 
 
-<script src="js/Pertanyaan.js"></script>
-<script src="js/app.js"></script>
+<script src="/js/Pertanyaan.js"></script>
+<script src="/js/appkuis.js"></script>
 </body>
 </html>
 @endsection

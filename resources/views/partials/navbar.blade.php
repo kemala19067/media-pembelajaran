@@ -16,6 +16,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/courses">Materi</a></li>
+            <li><a class="dropdown-item" href="/file">File</a></li>
             <li><a class="dropdown-item" href="#">Bookmark</a></li>
           </ul>
         </li>

@@ -19,8 +19,11 @@ use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Controllers\DashboardCoursesController;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Controllers\DashboardKuisTopikController;
+use App\Http\Controllers\DashboardFileCoursesController;
 use App\Http\Controllers\TopikController;
-
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\ForumPostinganController;
+use App\Http\Controllers\InformasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,7 +70,8 @@ Route::get('/kuis', function () {
         ]);
     });
 
-Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/file', [FileController::class, 'index']);
+Route::get('/download{file}', [FileController::class, 'download']);
 //halaman single course
 Route::get('courses/{course:slug}', [CourseController::class, 'show']);
 
@@ -112,6 +116,7 @@ Route::get('/awal', function () {
     });
 
 
+
 Route::get('/login', [LoginController::class,'index'])->name('login');
 Route::post('/login', [LoginController::class,'authenticate'])->name('login');
 
@@ -122,13 +127,19 @@ Route::get('/about', [AboutController::class,'index']);
 Route::get('/awal', [AwalController::class,'index']);
 Route::get('/kontak', [KontakController::class,'index']);
 
+Route::get('/courses', [CourseController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class,'index']);
 
 Route::get('/dashboard/courses/checkSlug', [DashboardCoursesController::class, 'checkSlug']);
+Route::get('/dashboard/filecourses/view{id}',[ DashboardCoursesController::class, 'view']);
+Route::resource('/dashboard/informasi', InformasiController::class);
+
 Route::resource('/dashboard/courses', DashboardCoursesController::class);
+Route::resource('/dashboard/filecourses', DashboardFileCoursesController::class);
+Route::get('/dashboard/filecourses/view{id}',[ DashboardCoursesController::class, 'view']);
 
+Route::resource('/forumpostingan', ForumPostinganController::class);
 Route::resource('/dashboard/forum', DashboardForumController::class);
-
 Route::resource('/dashboard/pengguna/admin', PenggunaAdminController::class);
 
 Route::resource('/dashboard/pengguna/user', PenggunaUserController::class);

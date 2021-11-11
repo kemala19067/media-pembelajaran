@@ -24,7 +24,7 @@ class ForumController extends Controller
     ]);
 
    if($query){
-       return back()->with('success','Berhasil membuat forum !!');
+       return back()->with('success','Berhasil membuat postingan !!');
    }
       }
     }

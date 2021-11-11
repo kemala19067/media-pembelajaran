@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Kuis;
+use App\Models\File;
 use Illuminate\Http\Request;
 
-class DashboardKuisTopikController extends Controller
+class DashboardFileCoursesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,10 @@ class DashboardKuisTopikController extends Controller
      */
     public function index()
     {
-        $datas = Kuis::all();
-        
-        return view('dashboard.kuis.topik.index', compact(
-            'datas'
+        $data = File::all();
+    
+        return view('dashboard.filecourses.index', compact(
+            'data'
         ));
     }
 
@@ -28,11 +27,10 @@ class DashboardKuisTopikController extends Controller
      */
     public function create()
     {
-        $model = new Kuis();
-        return view('dashboard.kuis.topik.create', compact(
-            'model'
+        $data = new File;
+        return view('dashboard.filecourses.create', compact(
+            'data'
         ));
-        // return view('dashboard.kuis.topik.create');
     }
 
     /**
@@ -43,25 +41,25 @@ class DashboardKuisTopikController extends Controller
      */
     public function store(Request $request)
     {
-        $model = Kuis::find($request->id);
-        Kuis::updateOrCreate(['id'=> $request->id],
-        [
-            "title" => $request->title,
-            "body" => $request->body
-
-        ]
-        );
-
-        return redirect('dashboard/kuis/topik');
-    }
-
+        
+        {
+            $model = File::find($request->id);
+            File::updateOrCreate(['id'=> $request->id],
+            [
+                "name" => $request->name,
+                "description" => $request->description,
+                "file" => $request->file
+            ]
+            );
+            return redirect('dashboard/filecourses');
+    }}
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kuis  $kuis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Kuis $kuis)
+    public function show($id)
     {
         //
     }
@@ -69,42 +67,35 @@ class DashboardKuisTopikController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kuis  $kuis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $model = Kuis::where('id',$id)->first();
-        return view('dashboard.kuis.topik.edit', compact(
-            'model'
-        ));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Kuis  $kuis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kuis $kuis)
+    public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kuis  $kuis
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        
-        $kuis = Kuis::find($id);
-        $kuis->delete();
-        
-        
-        return redirect('/dashboard/kuis/topik')->with('success', 'Topik telah dihapus!');
+        //
     }
+    
 }

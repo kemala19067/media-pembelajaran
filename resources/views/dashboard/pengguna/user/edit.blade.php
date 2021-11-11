@@ -35,5 +35,5 @@
 
     <button class="btn btn-info" type="submit">SIMPAN</button>
 </form>
-@method('PATCH')
+
 @endsection

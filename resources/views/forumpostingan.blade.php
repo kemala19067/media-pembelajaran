@@ -32,37 +32,26 @@
             <div class="row">
                 <div class="col-xl-4 col-md-12 col-12 mb-6">
                     <div class="list-group">
-                                                <a href="/user/postinganku/1" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">user1</p>
+                    @foreach ($forumpostingan as $forum)
+                            <a href="/user/postinganku/1" class="list-group-item list-group-item-action">
+                            <p class="mb-1 text-dark-success">{{ $forum->title }}</p>
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Topik1 ...</h5>
+                                <h5 class="mb-1">{{ $forum->content }}</h5>
                                 <small>2 days ago</small>
                             </div>
+                            
+                            @endforeach
                             <p class="mb-1 text-secondary">0 komentar</p>
                         </a>
-                                                <a href="/user/postinganku/2" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">user2</p>
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Topik2 ...</h5>
-                                <small>2 days ago</small>
-                            </div>
+                            <a href="/user/postinganku/2" class="list-group-item list-group-item-action">
+                            
                             <p class="mb-1 text-secondary">0 komentar</p>
                         </a>
                                                 <a href="/user/postinganku/3" class="list-group-item list-group-item-action">
                             <p class="mb-1 text-dark-success">user3</p>
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Topik3 ...</h5>
-                                <small>2 days ago</small>
-                            </div>
-                            <p class="mb-1 text-secondary">0 komentar</p>
+                           
                         </a>
-                                                <a href="/user/postinganku/4" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">user4</p>
-                            <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Topik4 ...</h5>
-                                <small>2 days ago</small>
-                            </div>
-                            <p class="mb-1 text-secondary">0 komentar</p>
+                                
                         </a>
                                             </div>
 
@@ -116,7 +105,10 @@
                                                     class="form-control "
                                                     aria-describedby="name">
                                                                                             </div>
+                                        <form action="addkomen" method="post" >
+                                         @csrf                                               
                                             <div class="col-md-2 mt-2 col-xxl-2">
+
                                                 <button type="submit" class="btn btn-primary">Comment</button>
                                             </div>
 

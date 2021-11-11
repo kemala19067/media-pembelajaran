@@ -18,44 +18,18 @@
     </div>
 
     <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <form method="post" action="{{ url('/dashboard/kuis/topik'.$model->Kuis) }}">
-        @method('put')
+    <form method="post" action="{{ url('/dashboard/kuis/topik/'.$model->kuis) }}">
+        
         @csrf
         <div class="mb-3">
-          <label for="title" class="form-label">Judul</label>
-          <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title',$model->title) }}">
-          @error('title')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-          @enderror
-        </div>
+        <input type="hidden" name="id" value="{{$model->id }}">
         <div class="mb-3">
-            <label for="body" class="form-label">Deskripsi</label>
-            <input type="text" class="form-control @error('body') is-invalid @enderror" id="body" name="body" required value="{{ old('body',$model->body) }}">
-            @error('body')
-              <div class="invalid-feedback">
-                  {{ $message }}
-              </div>
-          @enderror
-          </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
-      </form>
-    </div>
-
-    {{-- <script>
-        document.addEventListener('trix-file-accept', function(e) {
-            e.preventDefault();
-        })
-
-        const title = document.querySelector('#title');
-        const slug = document.querySelector('#slug');
-
-        title.addEventListener('change', function() {
-            fetch('/dashboard/courses/checkSlug?title=' + title.value)
-            .then(response => response.json())
-            .then(data => slug.value = data.slug)
-        });
-    </script> --}}
+        <label for="title" class="form-label">Nama</label>
+        <input type="text" name="title" value="{{ $model->title }}"><br></br>
+        <label for="body" class="form-label">Username</label>
+        <input type="text" name="body" value="{{ $model->body }}"><br></br>
+          
+        <button class="btn btn-info" type="submit">SIMPAN</button>
+</form>
 
 @endsection

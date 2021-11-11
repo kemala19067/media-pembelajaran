@@ -3,7 +3,7 @@
 @section('container')
 <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Halaman Topik</h1>
+            <h1 class="h2">Halaman File Materi</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
                 <div class="btn-group me-2">
                     <button type="button" class="btn btn-sm btn-outline-secondary"></button>
@@ -21,28 +21,33 @@
       </div>
     @endif
     {{-- <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <a class="btn btn-primary" href="{{ url('/dashboard/kuis/topik/create')}}">Tambah</a>
+    <a class="btn btn-primary" href="{{ url('/dashboard/pengguna/user/create')}}">Tambah</a>
     <br></br> --}}
 
     <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <a href="{{ url('/dashboard/kuis/topik/create')}}" class="btn btn-primary mb-3">Tambah</a>
+        <a href="{{ url('/dashboard/filecourses/create')}}" class="btn btn-primary mb-3">Tambah</a>
         <table class="table table-striped table-sm pt-3 pb-2 mb-3">
           <thead>
               <tr>
-                  <th>Topik</th>
+                  <th>Nama File</th>
                   <th>Deskripsi</th>
+                  <th>File</th>
+                  <th>Lihat</th>
+                  <th>Download</th>
                   <th>Action</th>
               </tr>
           </thead>
           <tbody>
-              @foreach($datas as $key=>$value)
+              @foreach($data as $data)
               <tr>
-                  <td>{{$value->title}}</td>
-                  <td>{{$value->body}}</td>
-                  
+                  <td>{{$data->name}}</td>
+                  <td>{{$data->description}}</td>
+                  <td>{{$data->file}}</td>
+                  <td><a href="">Lihat</a</td>
+                  <td><a href="">Download</a></td>
                   <td>
-                      <a href="{{url('/dashboard/kuis/topik/'.$value->id.'/edit') }}" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                      <form action="{{url('/dashboard/kuis/topik/'.$value->id) }}" method="post" class="d-inline">
+                      <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                      <form action="" method="post" class="d-inline">
                         @method('delete')
                         @csrf
                         <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus data?')"><i class="bi bi-trash"></i></button>
