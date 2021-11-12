@@ -43,15 +43,29 @@ class DashboardFileCoursesController extends Controller
     {
         
         {
-            $model = File::find($request->id);
-            File::updateOrCreate(['id'=> $request->id],
-            [
-                "name" => $request->name,
-                "description" => $request->description,
-                "file" => $request->file
-            ]
-            );
-            return redirect('dashboard/filecourses');
+            $data=new File;
+            if($request->file('file')){
+                $file=$request->file('file');
+                $filename=time().'.'.$file->getClientOriginalExtension();
+                $request->file->move('storage/', $filename);
+                $data->file= $filename;
+            }
+            $data->name=$request->name;
+            $data->description=$request->description;
+            $data->save();
+    
+            
+
+            return redirect()->back();
+            // $model = File::find($request->id);
+            // File::updateOrCreate(['id'=> $request->id],
+            // [
+            //     "name" => $request->name,
+            //     "description" => $request->description,
+            //     "file" => $request->file
+            // ]
+            // );
+            // return redirect('dashboard/filecourses');
     }}
     /**
      * Display the specified resource.
@@ -61,7 +75,8 @@ class DashboardFileCoursesController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = File::find($id);
+        return view('dashboard.filecourses.details', compact('data'));
     }
 
     /**
@@ -84,7 +99,16 @@ class DashboardFileCoursesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = File::find($request->id);
+            File::updateOrCreate(['id'=> $request->id],
+            [
+                "name" => $request->name,
+                "description" => $request->description,
+                "file"=> $request->file
+    
+            ]
+            );
+            return redirect('dashboard/filecourses');
     }
 
     /**
@@ -95,7 +119,12 @@ class DashboardFileCoursesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = File::find($id);
+        $data->delete();
+        
+        
+        return redirect('/dashboard/filecourses')->with('success', 'File telah dihapus!'); 
     }
+    
     
 }

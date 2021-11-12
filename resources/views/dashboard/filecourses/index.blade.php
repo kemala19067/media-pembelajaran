@@ -33,7 +33,7 @@
                   <th>Deskripsi</th>
                   <th>File</th>
                   <th>Lihat</th>
-                  <th>Download</th>
+                  
                   <th>Action</th>
               </tr>
           </thead>
@@ -43,11 +43,12 @@
                   <td>{{$data->name}}</td>
                   <td>{{$data->description}}</td>
                   <td>{{$data->file}}</td>
-                  <td><a href="">Lihat</a</td>
-                  <td><a href="">Download</a></td>
+                  <td><a href="/dashboard/filecourses/{{$data->id}}">Lihat</a</td>
+                  
                   <td>
-                      <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                      <form action="" method="post" class="d-inline">
+                      <a href="{{url('/dashboard/filecourses/'.$data->id.'/edit') }}" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+
+                      <form action="{{url('/dashboard/filecourses/'.$data->id) }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
                         <button class="badge bg-danger border-0" onclick="return confirm('Yakin hapus data?')"><i class="bi bi-trash"></i></button>

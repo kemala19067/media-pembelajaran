@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Information;
 class AboutController extends Controller
 {
     public function index()
     {
-        return view('about.index', [
-            'title' => 'Tentang'
-        ]);
+        $data = Information::all();
+
+        return view('about.index', compact(
+            'data'
+        ));
     }
+
+    
 }

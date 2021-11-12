@@ -11,9 +11,7 @@ class Information extends Model
     protected $table = 'information';
     protected $fillable = [
         'about',
-        'email',
-        'telp',
-        'location',
-        'cr'
+        'profile',
+        
     ];
 }

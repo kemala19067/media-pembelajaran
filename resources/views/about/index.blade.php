@@ -17,16 +17,22 @@
       </nav>
     </div>
 </div>
-
+@foreach($data as $data)
   <section class="py-5 text-center container">
     <div class="row py-lg-8">
       <div class="col-lg-10 col-md-8 mx-auto">
         <h1 class="fw-light">Tentang Website</h1>
-        <p class="lead text-muted">Selalu ada peluang disetiap kondisi yang sulit.
-		Bingung mulai belajar dari mana dan apa saja? Tenang! Disini kami telah menyusun strategi agar mudah dipahami alurnya</p>
+        <p class="lead text-muted">{{$data->about}}</p>
+  <br></br>
+        <h1 class="fw-light">Profil Website</h1>
+        <p class="lead text-muted">{{$data->profile}}</p>
+
+
       </div>
     </div>
   </section>
+
+  @endforeach
 
   <div class="album py-5 bg-info">
     <div class="container">
@@ -45,6 +51,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div class="col">
           <div class="card shadow-sm" style="color: rgb(255, 255, 255)">

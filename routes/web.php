@@ -24,6 +24,7 @@ use App\Http\Controllers\TopikController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\ForumPostinganController;
 use App\Http\Controllers\InformasiController;
+use App\Http\Controllers\Exam\QuizController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -131,12 +132,12 @@ Route::get('/courses', [CourseController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class,'index']);
 
 Route::get('/dashboard/courses/checkSlug', [DashboardCoursesController::class, 'checkSlug']);
-Route::get('/dashboard/filecourses/view{id}',[ DashboardCoursesController::class, 'view']);
+// Route::get('/dashboard/filecourses/view{id}',[ DashboardCoursesController::class, 'view']);
 Route::resource('/dashboard/informasi', InformasiController::class);
 
 Route::resource('/dashboard/courses', DashboardCoursesController::class);
 Route::resource('/dashboard/filecourses', DashboardFileCoursesController::class);
-Route::get('/dashboard/filecourses/view{id}',[ DashboardCoursesController::class, 'view']);
+// Route::get('/dashboard/filecourses/view{id}',[ DashboardCoursesController::class, 'view']);
 
 Route::resource('/forumpostingan', ForumPostinganController::class);
 Route::resource('/dashboard/forum', DashboardForumController::class);
@@ -164,3 +165,14 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
 
 });
+
+
+Route::get('/dashboard/filecourses/create',[DashboardFileCoursesController::class,'create']);
+Route::post('/dashboard/filecourses',[DashboardFileCoursesController::class,'store']);
+Route::post('/dashboard/filecourses',[DashboardFileCoursesController::class,'store']);
+Route::get('/dashboard/filecourses/{id}',[DashboardFileCoursesController::class,'show']);
+Route::get('/file/{id}',[FileController::class,'show']);
+Route::post('/file',[FileController::class,'store']);
+Route::get('/file/download/{file}',[FileController::class,'download']);
+
+Route::post('/dashboard/filecourses/download/{file}',[DashboardFileCoursesController::class,'download']);

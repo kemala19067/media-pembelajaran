@@ -16,20 +16,16 @@ class FileController extends Controller
     }
     public function store(Request $request)
     {
-        $data=new File();
-    $file=$request->file;
-
-    $filename=time(). '.'.$file->getClientOriginalExtension();
-    $request->file->move('assets,$filename');
-    $data->file=$filename;
-
-    $data->name=$request->name;
-    $data->description=$request->desription;
-
-    $data->save();
-    return redirect()->back();
+      
+}
+public function show($id)
+{
+    $data = File::find($id);
+    return view('lihatmateri', compact('data'));
+}
+public function download($file)
+{
+    return response()->download('storage/'.$file);
+}
 }
 
-    public function download(Request $request,$file)
-    {}
-}

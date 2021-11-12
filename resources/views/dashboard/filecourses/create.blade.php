@@ -17,7 +17,7 @@
     </div>
 
 <div class="table-responsive col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <form method="post" action="{{ url('/dashboard/filecourses') }}">
+    <form method="post" enctype="multipart/form-data" action="{{ url('/dashboard/filecourses') }}">
     @csrf
     <p> Tambah Data file </p>
     <div class="mb-3">

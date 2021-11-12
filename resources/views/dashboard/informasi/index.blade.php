@@ -29,10 +29,9 @@
           <thead>
             <tr>
               <th scope="col">Deskripsi Website</th>
-              <th scope="col">Copyright</th>
-              <th scope="col">Email</th>
-              <th scope="col">Telepon</th>
-              <th scope="col">Lokasi</th>
+              <th scope="col">Profil</th>
+           
+              
               
               <th scope="col">Action</th>
             </tr>
@@ -41,11 +40,9 @@
               @foreach ($info as $information)
               <tr>
                 <td>{{ $information->about }}</td>
-                <td>{{ $information->cr }}</td>
-                <td>{{ $information->email }}</td>
-                <td>{{ $information->telp }}</td>
-                <td>{{ $information->location }}</td>
-                
+                <td>{{ $information->profile}}</td>
+               
+              
                 <td>
                     <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
                     <form action="" method="post" class="d-inline">

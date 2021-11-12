@@ -34,7 +34,7 @@
               <tr>
                   <th>Nama File</th>
                   <th>Deskripsi</th>
-                  <th>File</th>
+                 
                   <th>Lihat</th>
                   <th>Download</th>
                   
@@ -45,9 +45,9 @@
               <tr>
                   <td>{{$data->name}}</td>
                   <td>{{$data->description}}</td>
-                  <td>{{$data->file}}</td>
-                  <td><a href="">Lihat</a</td>
-                  <td><a href="">Download</a></td>
+               
+                  <td><a href="/file/{{$data->id}}">Lihat</a</td>
+                  <td><a href="/file/{{$data->file}}">Download</a></td>
                   
               </tr>
               @endforeach
