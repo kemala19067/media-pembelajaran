@@ -41,9 +41,19 @@
           </li>
         </ul>
       </div>
+      <div class="font-medium text-base text-gray-800">{{ Auth::user()->name   }}</div>
+      
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="/"><i class="bi bi-box-arrow-right"></i>Keluar</a>
+        <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Keluar') }}
+                    </x-jet-responsive-nav-link>
+                </form>
         </div>
     </div>
 </nav>

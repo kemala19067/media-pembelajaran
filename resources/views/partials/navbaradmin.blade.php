@@ -42,9 +42,21 @@
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+   <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+     <!-- Authentication -->
+      
+     <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Keluar') }}
+                    </x-jet-responsive-nav-link>
+                </form>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="/"><i class="bi bi-box-arrow-right"></i>Keluar</a>
+     
     </div>
   </div>
 </header>

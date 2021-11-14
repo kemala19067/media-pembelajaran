@@ -33,84 +33,34 @@
                 <div class="col-xl-4 col-md-12 col-12 mb-6">
                     <div class="list-group">
                     @foreach ($forumpostingan as $forum)
-                            <a href="/user/postinganku/1" class="list-group-item list-group-item-action">
+                            <a href="" class="list-group-item list-group-item-action">
+                        <br></br>
                             <p class="mb-1 text-dark-success">{{ $forum->title }}</p>
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">{{ $forum->content }}</h5>
                                 <small>2 days ago</small>
                             </div>
+                            <div class="btn-group">
+                         
+                            <button class="btn-btn default" id="btn-komentar-utama">komentar</button>
+                            </div>
+                            
+                            <form action="">
+                            
+                            
+                            <textarea style="margin-top:7px" name="komentar" class="form-control" id="komentar-utama" rows="4"></textarea>
+                            <input type="submit" class="btn btn-primary" value="Kirim">
+                            
+                            </form>
+                            
+                            
                             
                             @endforeach
-                            <p class="mb-1 text-secondary">0 komentar</p>
-                        </a>
-                            <a href="/user/postinganku/2" class="list-group-item list-group-item-action">
                             
-                            <p class="mb-1 text-secondary">0 komentar</p>
-                        </a>
-                                                <a href="/user/postinganku/3" class="list-group-item list-group-item-action">
-                            <p class="mb-1 text-dark-success">user3</p>
-                           
-                        </a>
-                                
-                        </a>
-                                            </div>
-
-                </div>
-                <div class="col-xl-8 col-md-12 col-12 mb-6">
-                    <!-- card -->
-                    <div class="card">
-
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between mb-5
-                      align-items-center">
-                                <!-- avatar -->
-                                <div class="d-flex align-items-center">
-                                    <div>
-                                        <img src="http://127.0.0.1:8000/assets/images/avatar/default.png" alt=""
-                                            class="avatar avatar-md rounded-circle">
-                                    </div>
-                                    <div class="ms-3">
-                                        <h5 class="mb-0 fw-bold">user1</h5>
-                                        <p class="mb-0">2 days ago</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <!-- text -->
-                                <p class="mb-4">Topik1 ...</p>
-                            </div>
-                            <!-- icons -->
-                            <div class="mb-4">
-                                <span class="me-1 me-md-4">
-                                    <i data-feather="message-square" class="icon-xxs
-                          text-muted me-2">
-                                    </i>
-                                    <span>0 komentar</span>
-                                </span>
-                            </div>
-                            
+                       
+               
                             <!-- row -->
-                            <form action="http://127.0.0.1:8000/user/komentar" method="post">
-                                <input type="hidden" name="_token" value="K1YFSGgIOlq0BxBesHZSA4w1FhoaHtothTBz0kvo">                                <div class="row">
-
-                                    <!-- input -->
-                                    <div class="col-xl-12 col-lg-10 col-md-9 col-12 ">
-
-                                        <div class="row g-3 align-items-center">
-
-                                            <div class="col-md-10 col-xxl-9  mt-0 mt-md-3">
-                                                <input type="text" hidden name="id" id="id" value="2">
-                                                <input type="text" id="komen" name="komen"
-                                                    class="form-control "
-                                                    aria-describedby="name">
-                                                                                            </div>
-                                        <form action="addkomen" method="post" >
-                                         @csrf                                               
-                                            <div class="col-md-2 mt-2 col-xxl-2">
-
-                                                <button type="submit" class="btn btn-primary">Comment</button>
-                                            </div>
+         
 
                                         </div>
                                     </div>
@@ -161,4 +111,14 @@
 
 </html>
 
+@endsection
+
+@section('footer')
+<script>
+$(document).ready(function()){
+    $('#btn-komentar-utama').click(function(){
+        alert(0);
+    })
+});
+</script>
 @endsection

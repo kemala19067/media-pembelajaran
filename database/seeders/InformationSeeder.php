@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Information;
 class InformationSeeder extends Seeder
 {
     /**
@@ -22,7 +22,7 @@ class InformationSeeder extends Seeder
             ];
 
             foreach ($information as $information) {
-                Pesan::create($information);
+                Information::create($information);
             }
     }
 }

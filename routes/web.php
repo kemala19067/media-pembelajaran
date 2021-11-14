@@ -25,6 +25,10 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\ForumPostinganController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\Exam\QuizController;
+
+use App\Http\Controllers\HomeController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -122,6 +126,7 @@ Route::get('/login', [LoginController::class,'index'])->name('login');
 Route::post('/login', [LoginController::class,'authenticate'])->name('login');
 
 Route::get('/register', [RegisterController::class,'index'])->name('register');
+
 Route::get('/cover', [CoverController::class,'index']);
 Route::post('/register', [RegisterController::class,'store']);
 Route::get('/about', [AboutController::class,'index']);
@@ -153,18 +158,18 @@ Route::post('add', [KontakController::class, 'add']);
 Route::resource('/dashboard/pesan', PesanController::class);
 Route::resource('/dashboard/kuis/topik', DashboardKuisTopikController::class);
 
-//foruser
-Route::middleware(['auth:sanctum','verified'])->group(function(){
-    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
-});
+// //foruser
+// Route::middleware(['auth:sanctum','verified'])->group(function(){
+//     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+// });
 
 
 
-//foradmin
-Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
-    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+// //foradmin
+// Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
+//     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
 
-});
+// });
 
 
 Route::get('/dashboard/filecourses/create',[DashboardFileCoursesController::class,'create']);
@@ -176,3 +181,10 @@ Route::post('/file',[FileController::class,'store']);
 Route::get('/file/download/{file}',[FileController::class,'download']);
 
 Route::post('/dashboard/filecourses/download/{file}',[DashboardFileCoursesController::class,'download']);
+
+
+
+Route::get('/home', [HomeController::class,'index']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
