@@ -58,20 +58,12 @@ Route::get('/kontak', function () {
         ]);
      });
 
-<<<<<<< HEAD
-    //  Route::get('/dashboard', function () {
-    //     return view('dashboard', [
-    //          "tittle" => "dashboard"
-    //         ]);
-    //      });
-=======
-     // Route::get('/dashboard', function () {
-     // return view('dashboard', [
-     //        "tittle" => "dashboard"
-     //       ]);
-     //    });
-     
->>>>>>> eee0132b81520e3850cdf3c6c858a10214236889
+     Route::get('/dashboard', function () {
+     return view('dashboard', [
+            "tittle" => "dashboard"
+           ]);
+        });
+
 Route::get('/kursus', function () {
     return view('kursus', [
         "tittle" => "Course"
