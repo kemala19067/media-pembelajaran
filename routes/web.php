@@ -75,6 +75,26 @@ Route::get('/kuis', function () {
         "tittle" => "Quiz"
         ]);
     });
+    Route::get('/kuis2', function () {
+        return view('kuis.kuis2', [
+            "tittle" => "Quiz"
+            ]);
+        });
+        Route::get('/kuis3', function () {
+            return view('kuis.kuis3', [
+                "tittle" => "Quiz"
+                ]);
+            });
+            Route::get('/kuis4', function () {
+                return view('kuis.kuis4', [
+                    "tittle" => "Quiz"
+                    ]);
+                });
+                Route::get('/soalkuis', function () {
+                    return view('kuis.soalkuis', [
+                        "tittle" => "Quiz"
+                        ]);
+                    });
 
 Route::get('/file', [FileController::class, 'index']);
 Route::get('/download{file}', [FileController::class, 'download']);

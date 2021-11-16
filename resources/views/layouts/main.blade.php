@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/file.css">
     <link rel="stylesheet" href="/js/Pertanyaan.js">
     <link rel="stylesheet" href="/js/appkuis.js">
+    <link rel="stylesheet" href="/css/kuis.css">
     <title>E-Learning TIK</title>
 </head>
 <body>
