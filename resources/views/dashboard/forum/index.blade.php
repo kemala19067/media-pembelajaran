@@ -26,7 +26,7 @@
         <table class="table table-striped table-sm pt-3 pb-2 mb-3">
           <thead>
             <tr>
-             
+
               <th scope="col">Nama Forum</th>
               <th scope="col">Konten</th>
               <th scope="col">Action</th>
@@ -37,7 +37,7 @@
               <tr>
               <td>{{$value->title}}</td>
                   <td>{{$value->content}}</td>
-            
+
                   <td>
                   <a href="{{url('/dashboard/forum/'.$value->id.'/edit') }}" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
                       <form action="{{url('/dashboard/forum/'.$value->id) }}" method="post" class="d-inline">

@@ -15,11 +15,11 @@ class DashboardForumController extends Controller
     public function index()
     {
         $datas = Forum::all();
-    
+
         return view('dashboard.forum.index', compact(
             'datas'
         ));
-        
+
     }
 
     /**
@@ -47,6 +47,7 @@ class DashboardForumController extends Controller
     Forum::updateOrCreate(['id'=> $request->id],
     [
         "title" => $request->title,
+        "slug" => $request->slug,
         "content" => $request->content
     ]
     );
@@ -86,7 +87,22 @@ class DashboardForumController extends Controller
      */
     public function update(Request $request, Forum $forum)
     {
-        //
+        $rules = [
+            'title' => 'required|max:255',
+            'content' => 'required'
+        ];
+
+        if($request->slug != $forum->slug) {
+            $rules['slug'] = 'required|unique:courses';
+        }
+
+        $validatedData = $request->validate($rules);
+
+
+        forum::where('id', $forum->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/forum')->with('success', 'Forum telah diubah!');
     }
 
     /**

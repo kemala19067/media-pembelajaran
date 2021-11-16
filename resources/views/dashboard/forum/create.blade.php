@@ -30,6 +30,15 @@
         @enderror
     </div>
     <div class="mb-3">
+        <label for="slug" class="form-label">Slug</label>
+        <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
+        @error('slug')
+          <div class="invalid-feedback">
+              {{ $message }}
+          </div>
+        @enderror
+    </div>
+    <div class="mb-3">
         <label for="content" class="form-label">Konten</label>
         <input type="text" class="form-control @error('content') is-invalid @enderror" id="content" name="content" required autofocus value="{{ old('content') }}">
         @error('username')
@@ -38,7 +47,7 @@
             </div>
         @enderror
     </div>
-    
+
     <button class="btn btn-primary" type="submit">SIMPAN</button>
 
     {{-- <table>
