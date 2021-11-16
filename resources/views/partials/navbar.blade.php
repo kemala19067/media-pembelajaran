@@ -17,18 +17,13 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/courses">Materi</a></li>
             <li><a class="dropdown-item" href="/file">File</a></li>
-            <li><a class="dropdown-item" href="#">Bookmark</a></li>
+   
           </ul>
         </li>
         </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/kuis" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Quiz
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/topik">Daftar Quiz</a></li>
-              <li><a class="dropdown-item" href="#">Peringkat</a></li>
-            </ul>
+          <li class="nav-item">
+          <a class="nav-link" href="/topik">Kuis</a>
+           
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/postingan" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -51,15 +51,14 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li class="dropdown" ><a ><span>Fitur</span> <i class="bi bi-chevron-down"></i></a>
+        <li><a class="nav-link scrollto" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
+          <li><a class="nav-link scrollto" href="#Fitur">Fitur</a></li>
             <ul>
-              <li><a class="nav-link scrollto" href="#Fitur">Kursus</a></li>
-              <li><a class="nav-link scrollto" href="#Fitur">Quiz</a></li>
-              <li><a class="nav-link scrollto" href="#Fitur">Forum</a></li>
+              
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#testimonials">Testimonial</a></li>
+
           <li><a class="nav-link scrollto" href="#contact">Kontak Kami</a></li>
           <li><a class="getstarted scrollto" href="/register">Masuk/Daftar</a></li>
         </ul>
@@ -75,7 +74,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">E-Learning TIK</h1>
+          <h1 data-aos="fade-up">Belajar Asik Belajar Bersama</h1>
           <h2 data-aos="fade-up" data-aos-delay="400">Nikmati akses materi secara gratis</h2>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
@@ -83,7 +82,8 @@
         </div>
       </div>
     </div>
-
+<br></br>
+<br></br>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -93,11 +93,15 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>About Us</h2>
+        <br></br>
+        <br></br>
+          <h2>Tentang Kami</h2>
         </div>
 
         <div class="row content">
           <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="150">
+      
+          
             <p>
               Beragam video pembelajaran tersedia di website E-Learning TIK. Banyak keuntungan yang bisa kamu akses seperti :
             </p>
@@ -123,6 +127,10 @@
       <div class="container">
 
         <div class="row">
+        <br></br>
+        <br></br>
+        <br></br>
+
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
             <img src="assets/img/about us.jpg" alt="" class="img-fluid">
           </div>
@@ -133,16 +141,16 @@
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-play-btn"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Course<br>Terdapat 20 materi pembelajaran</strong></p>
+                    <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Course<br>Terdapat materi pembelajaran mengenai Teknologi Informasi dan Komunikasi</strong></p>
                   </div>
                 </div>
 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-play-btn"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Quiz</strong><br> Terdapat 5 quiz menarik</p>
+                    <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Quiz</strong><br> Terdapat 4 quiz menarik. Menyediakan tes pemahaman mengenai Teknologi Informasi dan Komunikasi</p>
                   </div>
                 </div>
 
@@ -150,7 +158,7 @@
                   <div class="count-box">
                     <i class="bi bi-play-btn"></i>
                     <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Forum</strong><br>Terdapat 3 forum berdiskusi</p>
+                    <p><strong>Forum</strong><br>Terdapat forum diskusi. Wadah untuk berdiskusi terkait Teknologi Informasi dan Komunikasi</p>
                   </div>
                 </div>
 
@@ -159,164 +167,106 @@
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Testimonial</h2>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+      
 
         <div class="section-title" data-aos="fade-up">
           <h2>Kontak Kami</h2>
         </div>
 
-        <div class="row">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-about">
-              <h3>E-Learning TIK</h3>
-              <p>Pembelajaran Online untuk Sekolah Kejuruan. Belajar dapat dimanapun dan kapanpun</p>
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
+
+
+       
+    <main>
+        
+
+		<div class="contact-info">
+        <div class="card" style="background-color: #4682B4">
+        <i class="bi bi-envelope" style="color: black"></i>
+
+			<i class="icon" style="color: black"><small>Email</small></i>
+            <div class="card-content" style="color: black">
+                <h3>Email</h3>
+                <span>belajartik@gmail.com</span>
             </div>
-          </div>
+        </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="info">
-              <div>
-                <i class="ri-map-pin-line"></i>
-                <p>Surabaya<br>Jawa Timur</p>
-              </div>
-
-              <div>
-                <i class="ri-mail-send-line"></i>
-                <p>e-learningTIK@example.com</p>
-              </div>
-
-              <div>
-                <i class="ri-phone-line"></i>
-                <p>+62-21-88688888</p>
-              </div>
-
+        <div class="card" style="background-color: #4682B4">
+        <i class="bi bi-telephone" style="color: black"></i>
+            <i class="icon" style="color: black"><small>Telepon</small></i>
+            <div class="card-content" style="color: black">
+                <h3>Telepon</h3>
+                <span>+6282111222333</span>
             </div>
-          </div>
+        </div>
 
-          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+        <div class="card" style="background-color: #4682B4">
+        <i class="bi bi-geo-alt" style="color: black"></i>
+            <i class="icon" style="color: black"><small>Lokasi</small></i>
+            <div class="card-content" style="color: black">
+                <h3>Lokasi</h3>
+                <span>Surabaya</span>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+
+<div class="hero" id="home">
+            <div class="container-fluid">
+
+
+
+<div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+            <div class="container-fluid">
+                <div class="container">
+                @if(Session::get('success'))
+                    <div class="alert alert-success">
+                    {{ Session::get('success')}}
+                    </div>
+                @endif
+                    <div class="row align-items-center">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
+                        <form action="add" method="post" >
+                        @csrf
+                            <div class="contact-form">
+
+                                <div id="success"></div>
+                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Nama" required="required" data-validation-required-message="Masukkan nama ..." />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required="required" data-validation-required-message="Masukkan email ..." />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subjek" required="required" data-validation-required-message="Masukkan subjek ..." />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <textarea class="form-control" name="message" placeholder="Pesan" required="required" data-validation-required-message="tuliskan Pesan ..."></textarea>
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn" type="submit" name="sendMessageButton">Kirim</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	
+
             </form>
           </div>
 
@@ -333,7 +283,7 @@
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
-            &copy; Copyright <strong>Milik areknya</strong>. All Rights Reserved
+            &copy; Copyright <strong>Kelompok 3 Pemrograman Basis Data</strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
@@ -344,10 +294,7 @@
         </div>
         <div class="col-lg-6">
           <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
-            <a href="#about" class="scrollto">About</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
+           
           </nav>
         </div>
       </div>
