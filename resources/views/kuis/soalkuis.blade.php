@@ -17,7 +17,7 @@
                   
                   <a href="/kuis4" class="btn btn-primary">Kuis 4</a>
                   
-                  <a href="/kuis5" class="btn btn-primary">Kuis 5</a>
+                  
                   
 </center>
     </article>

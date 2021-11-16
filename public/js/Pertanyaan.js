@@ -1,9 +1,9 @@
 
-
+// Pertanyaan Informatika dan Keterampilan Generik
 // Array of Objects
 const index = [
     {
-        q:'Perangkat keras disebut juga dengan ..',
+        q:'Perangkat keras disebut juga dengan ...',
         options:['Hardware','Processor','Software','Semua jawaban salah'],
         answer:0
     },
@@ -13,29 +13,29 @@ const index = [
         answer:0
     },
     {
-        q:'Pengguna computer  disebut',
+        q:'Pengguna computer  disebut...',
         options:['Hardware','Software','Brainware','Toolkit'],
         answer:2
     },
     {
         q:'CPU merupakan contoh ...',
         options:['Hardware','Software','Toolkit','Brainware'],
-        answer:0
+        answer:0    
     },
     {
-        q:'Program-program yang ada di computer disebut ..',
+        q:'Program-program yang ada di computer disebut...',
         options:['Scanner','Linux','Software', 'Hardware'],
         answer:2
     },
     {
-        q:'Tempat media penyimpanan data pada',
+        q:'Tempat media penyimpanan data pada...',
         options:['Plotter','Printer','Scanner','Hardisk'],
-        answer:4
+        answer:3
     },
     {
-        q:'Komponen utama PC kecuali',
-        options:['Motherboard','Harddisk','Printer','Scanner'],
-        answer:1
+        q:'Komponen utama PC kecuali...',
+        options:['Motherboard','Harddisk','Printer','Processor'],
+        answer:2
     },
     {
         q:'Perintah save dapat juga dijalankan dengan menekan tombol ...',
@@ -43,12 +43,12 @@ const index = [
         answer:0
     },
     {
-        q:'Rumpun ilmu informatika dan komputer yang menitikberatkan pada hardware dan arsitektur Komputer adalah',
+        q:'Rumpun ilmu informatika dan komputer yang menitikberatkan pada hardware dan arsitektur Komputer adalah...',
         options:['Teknik Komputer','Rekayasa Perangkat Lunak','Sistem Informasi','Ilmu komputer'],
         answer:0
     },
     {
-        q:'Rumpun ilmu informatika dan komputer yang menitik beratkan pada teori adalah',
+        q:'Rumpun ilmu informatika dan komputer yang menitik beratkan pada teori adalah...',
         options:['Teknik Komputer','Rekayasa Perangkat Lunak','Sistem Informasi','Ilmu komputer'],
         answer:3
     }
