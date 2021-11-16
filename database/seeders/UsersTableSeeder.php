@@ -17,22 +17,22 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => "user",
                 'username' => 'user123',
-                'role' => 'USR',
+                'role' => '0',
                 'email' => 'user@gmail.com',
-                'password' => bcrypt('11111')
+                'password' => 'useruser'
             ],
             [
                 'name' => "admin",
                 'username' => 'admin123',
-                'role' => 'ADM',
+                'role' => '1',
                 'email' => 'admin@gmail.com',
-                'password' => bcrypt('11111')
+                'password' => 'adminadmin'
                 ]
             ];
 
 
-            foreach ($users as $user) {
-                User::create($user);
+            foreach ($users as $users) {
+                User::create($users);
             }
     }
 }
