@@ -44,7 +44,7 @@
   </button>
    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
      <!-- Authentication -->
-      
+
      <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
@@ -56,7 +56,7 @@
                 </form>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-     
+
     </div>
   </div>
 </header>
@@ -67,7 +67,7 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
+            <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/home">
               Dashboard Admin
             </a>
           </li>
@@ -92,7 +92,7 @@
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="bi bi-calendar2-x"></i> Kuis</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item {{ Request::is('/dashboard/kuis/topik*') ? 'active' : '' }}" href="/dashboard/kuis/topik">Topik</a></li>
-            
+
             </ul>
           </li>
           {{-- <li class="nav-item">

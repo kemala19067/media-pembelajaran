@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Forum;
 use App\Models\course;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AwalController;
@@ -127,12 +128,19 @@ Route::get('/forum', function () {
     ]);
 });
 
-    Route::get('/forumpostingan', function () {
-        return view('forumpostingan', [
-            "tittle" => "forumpostingan"
-            ]);
-        });
+    // Route::get('/forumpostingan', function () {
+    //     return view('forumpostingan', [
+    //         "tittle" => "forumpostingan"
+    //         ]);
+    //     });
 
+Route::get('/komens', function () {
+    return view('komens', [
+        "title" => "Forum",
+        "forums" => forum::all()
+    ]);
+});
+Route::get('komen/{course:slug}', [ForumController::class, 'show']);
 
 
 Route::get('/awal', function () {
@@ -171,8 +179,9 @@ Route::resource('/dashboard/pengguna/admin', PenggunaAdminController::class);
 
 Route::resource('/dashboard/pengguna/user', PenggunaUserController::class);
 
-Route::get('forum', [ForumController::class,'index']);
-Route::post('addforum', [ForumController::class, 'addforum']);
+Route::resource('forum', BuatForumController::class);
+// Route::get('forum', [ForumController::class,'index']);
+// Route::post('addforum', [ForumController::class, 'addforum']);
 
 Route::get('kontak', [KontakController::class,'index']);
 Route::post('add', [KontakController::class, 'add']);

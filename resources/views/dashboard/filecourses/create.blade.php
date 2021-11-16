@@ -21,8 +21,8 @@
     @csrf
     <p> Tambah Data file </p>
     <div class="mb-3">
-    
-        <label for="name" class="form-label">Nama</label>
+
+        <label for="name" class="form-label">Nama File</label>
         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required autofocus value="{{ old('name') }}">
         @error('name')
             <div class="invalid-feedback">
@@ -31,6 +31,7 @@
         @enderror
     </div>
     <div class="mb-3">
+        <label for="description" class="form-label">Deskripsi</label>
         <input type="text" class="form-control @error('descriptione') is-invalid @enderror" id="description" name="description" required autofocus value="{{ old('description') }}">
         @error('description')
             <div class="invalid-feedback">
@@ -39,7 +40,7 @@
         @enderror
     </div>
     <div class="mb-3">
-        <label for="file" class="form-label">file</label>
+        <label for="file" class="form-label">File</label>
         <input type="file" class="form-control @error('file') is-invalid @enderror" id="file" name="file" required autofocus value="{{ old('file') }}">
         @error('file')
             <div class="invalid-feedback">
@@ -47,7 +48,7 @@
             </div>
         @enderror
     </div>
-    
+
     <button class="btn btn-primary" type="submit">SIMPAN</button>
 
     {{-- <table>
@@ -63,7 +64,7 @@
             <td>Password</td>
             <td><input type="file" name="file"></td>
         </tr>
-        
+
         <button class="btn btn-info" type="submit">SIMPAN</button> <br></br>
     </table> --}}
     </form>

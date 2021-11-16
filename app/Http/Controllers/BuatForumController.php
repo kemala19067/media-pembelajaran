@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Forum;
 use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
-class ForumController extends Controller
+
+class BuatForumController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +17,8 @@ class ForumController extends Controller
     public function index()
     {
         $forums = Forum::all();
-        return view('komens', compact(
-            'forums'
-        ));
+        return view('forum.index');
+
     }
 
     /**
@@ -27,7 +28,10 @@ class ForumController extends Controller
      */
     public function create()
     {
-        //
+        $model = new Forum;
+        return view('forum.index', compact(
+            'model'
+        ));
     }
 
     /**
@@ -38,9 +42,16 @@ class ForumController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
+    $model = Forum::find($request->id);
+    Forum::updateOrCreate(['id'=> $request->id],
+    [
+        "title" => $request->title,
+        "slug" => $request->slug,
+        "content" => $request->content
+    ]
+    );
+    return redirect('forum');
+}
     /**
      * Display the specified resource.
      *
@@ -49,10 +60,10 @@ class ForumController extends Controller
      */
     public function show(Forum $forum)
     {
-        return view('komen', [
-            "title" => "Forum",
-            "forum" => $forum
-        ]);
+        // return view('komens', [
+        //     "title" => "Komentar",
+        //     "forum" => $forum
+        // ]);
     }
 
     /**
@@ -88,4 +99,44 @@ class ForumController extends Controller
     {
         //
     }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(course::class, 'slug', $request->title);
+        return response()->json(['slug' => $slug]);
+    }
 }
+
+
+// <?php
+
+// namespace App\Http\Controllers;
+
+// use Illuminate\Http\Request;
+
+// use Illuminate\Support\Facades\DB;
+
+
+// class ForumController extends Controller
+// {
+//     public function index(){
+//         return view('forum.index');
+//     }
+
+//     public function addforum(Request $request){
+//       $request->validate([
+//           'title'=>'required',
+//           'slug' => 'required',
+//           'content'=>'required'
+//     ]);
+//     $query = DB::table('forums')->insert([
+//         'title'=>$request->input('title'),
+//         'slug'=>$request->input('slug'),
+//         'content'=>$request->input('content')
+//     ]);
+//     if($query){
+//        return back()->with('success','Berhasil membuat postingan !!');
+//     }
+//     }
+
+// }

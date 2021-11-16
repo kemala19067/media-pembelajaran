@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Forum;
+use App\Models\Komen;
 use Illuminate\Http\Request;
 
-class ForumController extends Controller
+class KomentarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,8 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $forums = Forum::all();
-        return view('komens', compact(
-            'forums'
-        ));
+        $datas = Komen::all();
+        return view('komen', compact('datas'));
     }
 
     /**
@@ -27,7 +25,10 @@ class ForumController extends Controller
      */
     public function create()
     {
-        //
+        $model = new Komen();
+        return view('komen', compact(
+            'model'
+        ));
     }
 
     /**
@@ -38,30 +39,34 @@ class ForumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = Komen::find($request->id);
+        Komen::updateOrCreate(['id'=> $request->id],
+        [
+            "nama" => $request->nama,
+            "komen" => $request->komen
+        ]);
+
+        return redirect('komen');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Komen  $komen
      * @return \Illuminate\Http\Response
      */
-    public function show(Forum $forum)
+    public function show(Komen $komen)
     {
-        return view('komen', [
-            "title" => "Forum",
-            "forum" => $forum
-        ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Komen  $komen
      * @return \Illuminate\Http\Response
      */
-    public function edit(Forum $forum)
+    public function edit(Komen $komen)
     {
         //
     }
@@ -70,10 +75,10 @@ class ForumController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Komen  $komen
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Forum $forum)
+    public function update(Request $request, Komen $komen)
     {
         //
     }
@@ -81,10 +86,10 @@ class ForumController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Komen  $komen
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Forum $forum)
+    public function destroy(Komen $komen)
     {
         //
     }

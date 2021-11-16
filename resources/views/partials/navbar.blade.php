@@ -17,27 +17,27 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/courses">Materi</a></li>
             <li><a class="dropdown-item" href="/file">File</a></li>
-   
+
           </ul>
         </li>
         </li>
           <li class="nav-item">
           <a class="nav-link" href="/topik">Kuis</a>
-           
+
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/postingan" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Forum
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/forumpostingan">Postingan</a></li>
+              <li><a class="dropdown-item" href="/komens">Postingan</a></li>
               <li><a class="dropdown-item" href="/forum">Buat Forum</a></li>
             </ul>
           </li>
         </ul>
       </div>
       <div class="font-medium text-base text-gray-800">{{ Auth::user()->name   }}</div>
-      
+
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
         <form method="POST" action="{{ route('logout') }}">
