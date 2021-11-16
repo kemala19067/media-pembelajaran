@@ -58,11 +58,11 @@ Route::get('/kontak', function () {
         ]);
      });
 
-     Route::get('/dashboard', function () {
-        return view('dashboard', [
-             "tittle" => "dashboard"
-            ]);
-         });
+    //  Route::get('/dashboard', function () {
+    //     return view('dashboard', [
+    //          "tittle" => "dashboard"
+    //         ]);
+    //      });
 Route::get('/kursus', function () {
     return view('kursus', [
         "tittle" => "Course"
