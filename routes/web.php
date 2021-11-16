@@ -58,11 +58,20 @@ Route::get('/kontak', function () {
         ]);
      });
 
+<<<<<<< HEAD
     //  Route::get('/dashboard', function () {
     //     return view('dashboard', [
     //          "tittle" => "dashboard"
     //         ]);
     //      });
+=======
+     // Route::get('/dashboard', function () {
+     // return view('dashboard', [
+     //        "tittle" => "dashboard"
+     //       ]);
+     //    });
+     
+>>>>>>> eee0132b81520e3850cdf3c6c858a10214236889
 Route::get('/kursus', function () {
     return view('kursus', [
         "tittle" => "Course"
@@ -74,6 +83,26 @@ Route::get('/kuis', function () {
         "tittle" => "Quiz"
         ]);
     });
+    Route::get('/kuis2', function () {
+        return view('kuis.kuis2', [
+            "tittle" => "Quiz"
+            ]);
+        });
+        Route::get('/kuis3', function () {
+            return view('kuis.kuis3', [
+                "tittle" => "Quiz"
+                ]);
+            });
+            Route::get('/kuis4', function () {
+                return view('kuis.kuis4', [
+                    "tittle" => "Quiz"
+                    ]);
+                });
+                Route::get('/soalkuis', function () {
+                    return view('kuis.soalkuis', [
+                        "tittle" => "Quiz"
+                        ]);
+                    });
 
 Route::get('/file', [FileController::class, 'index']);
 Route::get('/download{file}', [FileController::class, 'download']);

@@ -15,24 +15,24 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'name' => "user",
-                'username' => 'user123',
-                'role' => 'USR',
-                'email' => 'user@gmail.com',
-                'password' => bcrypt('11111')
+                'name' => "tester user ",
+                'username' => 'testerrrrrrrr',
+                'role' => '0',
+                'email' => 'tester@gmail.com',
+                'password' => '11111111'
             ],
             [
-                'name' => "admin",
-                'username' => 'admin123',
-                'role' => 'ADM',
+                'name' => "tester admin",
+                'username' => 'adminnnnn',
+                'role' => '1',
                 'email' => 'admin@gmail.com',
-                'password' => bcrypt('11111')
+                'password' => '11111111'
                 ]
             ];
 
 
-            foreach ($users as $user) {
-                User::create($user);
+            foreach ($users as $users) {
+                User::create($users);
             }
     }
 }

@@ -1,0 +1,45 @@
+@fontface{
+    font-family: poppins;
+    src:url('Poppins-Black.ttf');
+    }
+#login{
+    font-family: roboto;
+    background:#6610F2;
+    color: white;
+    box-shadow: black;
+}
+#login:hover{
+    background: #4e04c7;
+    color: white;
+}
+#jumbotron
+{
+    background: #6610F2;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    margin-bottom: 50px;
+    
+}
+#buttonget{
+    background: white;
+    color : #6610F2;
+    font-family: roboto;
+   
+}
+#buttonget:hover{
+    background:#4e04c7;
+    color:white;
+}
+#nav{
+    background:#6610F2;
+}
+#test {
+padding: 40px;
+margin-top: -200px;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+​
