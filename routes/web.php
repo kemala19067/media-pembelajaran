@@ -26,6 +26,8 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\ForumPostinganController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\Exam\QuizController;
+use App\Http\Controllers\BuatForumController;
+use App\Http\Controllers\KomentarForumController;
 
 use App\Http\Controllers\HomeController;
 
@@ -185,6 +187,10 @@ Route::resource('forum', BuatForumController::class);
 
 Route::get('kontak', [KontakController::class,'index']);
 Route::post('add', [KontakController::class, 'add']);
+
+
+Route::post('addkomenforum', [KomentarForumController::class, 'addkomenforum']);
+
 Route::resource('/dashboard/pesan', PesanController::class);
 Route::resource('/dashboard/kuis/topik', DashboardKuisTopikController::class);
 

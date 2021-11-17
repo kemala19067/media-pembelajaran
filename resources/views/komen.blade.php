@@ -12,7 +12,7 @@
             {{ Session::get('success')}}
         </div>
     @endif
-    <form action="/komen/{{ $forum->slug }}" method="POST">
+    <form action="/komen/{{ $forum->id }}" method="POST">
         @csrf
         <div class="card" style="width: 550px; float: center;">
             <div class="card-body">

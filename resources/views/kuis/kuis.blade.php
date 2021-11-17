@@ -14,10 +14,10 @@
 <body>
     <div class="home-box custom-box">
 	<center>
-<img src="https://cdni.iconscout.com/illustration/premium/thumb/many-peoples-thinking-and-one-man-sitting-on-question-mark-2739229-2280832.png" alt="">
+<img src="https://quizizz.com/_media/quizzes/502d3f75-02e4-4910-963f-48ff36b84470_900_900" alt="">
 </center>
 
-        <h2>KUIS YUK !!</h2>
+        <h2>KUIS 1</h2>
         <br></br>
         <h4>Intruksi:</h4>
         <p>Total pertanyaan: <span class="total-pertanyaan">10</span></p>
