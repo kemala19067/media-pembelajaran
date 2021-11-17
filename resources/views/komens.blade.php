@@ -10,14 +10,14 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $forum->title }}</h5>
                 <p class="card-text">{{ $forum->content }}</p>
-             
+
     @if(Session::get('success'))
         <div class="alert alert-success">
             {{ Session::get('success')}}
         </div>
     @endif
-    <form action="/komen/{{ $forum->slug }}" method="POST">
-        @csrf
+    <form>
+        {{-- @csrf --}}
         <div class="card" style="width: 550px; float: center;">
             <div class="card-body">
                 <!-- <div class="mb-3">
@@ -32,20 +32,20 @@
             </div>
         </div>
     </form>
-               
+
             </div>
         </div>
     </div>
-    
+
 </article>
 <center>
-  
+
     </center>
-    
+
    <br></br>
 @endforeach
 
-    
+
 @endsection
 
 

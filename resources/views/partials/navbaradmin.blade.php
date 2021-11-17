@@ -111,11 +111,11 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link {{ Request::is('dashboard/informasi*') ? 'active' : '' }}" href="/dashboard/informasi">
               <i class="bi bi-chat-left-text"></i> Informasi Website
             </a>
-          </li>
+          </li> --}}
     </nav>
   </div>
 </div>
